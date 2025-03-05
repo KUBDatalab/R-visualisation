@@ -2,23 +2,20 @@
 title: "Different types of plots"
 teaching: 10
 exercises: 5
-questions:
-- "What other types of plots can we make?"
-- "How can we control the order of stuff in plots?"
-objectives:
-- "Learn how to make histograms, barcharts, boxplots and violinplots"
-keypoints:
-- "Categorical data, aka factors can control the order of data in plots"
-- "ggplot makes it easy to make many different types of plots"
-- "ggplot have many useful extensions"
-
-source: Rmd
 ---
 
-```{r, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("03-")
-```
+:::: questions
+- What other types of plots can we make?
+- How can we control the order of stuff in plots?
+::::
+
+
+:::: objectives
+- Learn how to make histograms, barcharts, boxplots and violinplots
+::::
+
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -146,17 +143,17 @@ diamonds %>%
 Here we have the variable we are making boxplots of, on the x-axis,
 and splitting them up in one plot per cut, on the y-axis.
 
+:::: callout
+## What is a boxplot?
 
-> ## What is a boxplot?
->
-> Boxplots are useful for showing different distributions. The fat line in
-> the middle of the box is the median, the two ends of the box is first and 
-> third quartile, and the two whiskers (or lines) on both sides of the 
-> box shows the minimum and maximum values - excluding outliers, defined for
-> this purpose as values that lies more that 1.5 times the interquartile 
-> range from the box.
->
-{: .callout}
+Boxplots are useful for showing different distributions. The fat line in
+the middle of the box is the median, the two ends of the box is first and 
+third quartile, and the two whiskers (or lines) on both sides of the 
+box shows the minimum and maximum values - excluding outliers, defined for
+this purpose as values that lies more that 1.5 times the interquartile 
+range from the box.
+
+::::
 
 ## Violinplots
 
@@ -169,20 +166,23 @@ diamonds %>% ggplot(aes(carat, y = cut)) +
   geom_violin()
 ```
 
+:::: challenge
+## Exercise
+The geom_ for making violin plots is `geom_violin`
+Look at the help for `geom_violin` and make a violinplot
+with carat on the x-axis, and cut on the y-axis.
 
-> ## exercise
-> The geom_ for making violin plots is `geom_violin`
-> Look at the help for `geom_violin` and make a violinplot
-> with carat on the x-axis, and cut on the y-axis.
-> > ## Solution
-> >
-> > diamonds %>% 
-> >   ggplot(aes(carat, y = cut)) +
-> >
-> >   geom_violin()
-> >
-> {: .solution}
-{: .challenge}
+:::: solution 
+## Solution
+
+```{r solution, eval = FALSE}
+diamonds %>% 
+ggplot(aes(carat, y = cut)) +
+geom_violin()
+```
+
+::::
+::::
 
 
 
@@ -203,3 +203,8 @@ advanced functionality around plots. Two of the more interesting extensions are:
 
 `gganimate` makes it easyish to make animated plots using ggplot2
 
+:::: keypoints
+- "Categorical data, aka factors can control the order of data in plots"
+- "ggplot makes it easy to make many different types of plots"
+- "ggplot have many useful extensions"
+::::
