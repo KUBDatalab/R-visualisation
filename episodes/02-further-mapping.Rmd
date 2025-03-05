@@ -68,10 +68,14 @@ That means that we are not mapping data to the colour!
 
 What else can we map data to?
 
+More or less every phenomenon in a scatter plot can have data mapped to it, eg.
+the size of the points:
+
 ```{r}
 ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color, size = table)) +
   geom_point()
 ```
+
 Not at good plot... We need to think about the combination of stuff we want to
 plot. Often two plots are better than trying to cram everything into a single plot.
 
