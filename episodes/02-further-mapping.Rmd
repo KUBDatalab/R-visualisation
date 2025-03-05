@@ -2,22 +2,21 @@
 title: "Further mapping"
 teaching: 10
 exercises: 5
-questions:
+---
+
+:::: questions
 - "Can we show data using something other than position?"
 - "What is correct, colour or color?"
 - "How do I find out what a `geom_` can do?"
-objectives:
-- "Learn to plot more than just positions"
-keypoints:
-- "Data can be plottet as something other than position"
-- "Types of plots are determined by `geom_`functions"
+::::
 
-source: Rmd
----
+:::: objectives
+- "Learn to plot more than just positions"
+
+::::
+
 
 ```{r options, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("02-")
 library(tidyverse)
 ```
 
@@ -40,17 +39,19 @@ Are these colours suitable? Probably not. The authors of this course
 material are not able to distinguish all of the colours. We will return to how 
 to change colours in plots later in this course.
 
-> ## Spelling
-> 
-> Color, and some other words can be spelled in more than one way.
-> For arguments ggplot understands both the correct english spelling
-> *colour* and the american spelling *color*.
-> 
-> Note that this only applies to the arguments in the functions. If the
-> column in the dataset is called *color* ggplot will not find it if
-> you write *colour* instead.
->
-{: .callout}
+
+:::: callout
+## Spelling
+ 
+Color, and some other words can be spelled in more than one way.
+For arguments ggplot understands both the correct english spelling
+*colour* and the american spelling *color*.
+ 
+Note that this only applies to the arguments in the functions. If the
+column in the dataset is called *color* ggplot will not find it if
+you write *colour* instead.
+
+::::
 
 Not surprisingly, the "best" color, D have higher prices than the "worst"
 color, "J".
@@ -108,19 +109,19 @@ handling overplotting, the phenomenon that multiple data points might be
 identical. 
 
 
+:::: callout
+## geoms
 
-> ## geoms
->
-> geom_point() is the function we use to make scatter plots; because points is
-> a geometric object. 
-> Other geometric objects can be plotted:
-> geom_histogram() will plot histograms
-> geom_line() will plot lines
-> 
->
-> All geometries in ggplot2 are named using the pattern geom_
-> 
-{: .callout}
+geom_point() is the function we use to make scatter plots; because points is
+a geometric object. 
+Other geometric objects can be plotted:
+
+* geom_histogram() will plot histograms
+* geom_line() will plot lines
+ 
+All geometries in ggplot2 are named using the pattern geom_
+
+::::
 
 ### What kind of shapes can we plot?
 
@@ -136,4 +137,7 @@ ggpubr::show_point_shapes()
 
 
 
-{% include links.md %}
+:::: keypoints
+- "Data can be plottet as something other than position"
+- "Types of plots are determined by `geom_`functions"
+::::
