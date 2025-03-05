@@ -100,7 +100,7 @@ The list of stuff we can map data to in geom_point:
 Different geom_ functions have different mandatory/required aesthetics.
 
 ## Not really mapping. Sorta.
-Rather than mapping values from the data to an aesthetic, we can provide
+Rather than mapping values from data to an aesthetic, we can provide
 values directly. One very useful aesthetic to play with, at least when
 we have as many datapoints as we have here, is `alpha`:
 
