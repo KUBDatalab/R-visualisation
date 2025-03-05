@@ -63,6 +63,7 @@ episodes:
 - getting_started.Rmd
 - further_mapping.Rmd
 - different_plots.Rmd
+- facets.Rmd
 
 # Information for Learners
 learners:
