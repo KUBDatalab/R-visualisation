@@ -178,8 +178,7 @@ Make it a scatterplot
 ## Solution
 
 ```{r solution, eval = FALSE}
-diamonds %>%
-  ggplot(aes(carat, x)) +
+ggplot(data = diamonds, mapping = aes(carat, x)) +
   geom_point()
 ```
 
