@@ -66,7 +66,7 @@ That means that we are not mapping data to the colour!
 
 
 
-What else can we map data to?
+## What else can we map data to?
 
 More or less every phenomenon in a scatter plot can have data mapped to it, eg.
 the size of the points:
@@ -100,6 +100,7 @@ The list of stuff we can map data to in geom_point:
 Different geom_ functions have different mandatory/required aesthetics.
 
 ## Not really mapping. Sorta.
+
 Rather than mapping values from data to an aesthetic, we can provide
 values directly. One very useful aesthetic to play with, at least when
 we have as many datapoints as we have here, is `alpha`:
@@ -129,7 +130,7 @@ All geometries in ggplot2 are named using the pattern geom_
 
 ::::
 
-### Using shapes in the plot
+## Using shapes in the plot
 
 Shapes can be useful if we want to make plots that are robust in regards to
 colour reproduction on screens, in printers or for people with reduced
