@@ -2,25 +2,21 @@
 title: "Before we Start"
 teaching: 10
 exercises: 5
-questions:
-- "Why are we even visualizing?"
-- "What are the metadata of this dataset?"
-objectives:
-- "Get to know the importance of visualisations"
-- "Get to know the data we are going to work with"
-keypoints:
-- "This is not an introduction to R"
-- "Visualisation is a useful way of representing data"
-- "We are going to study diamonds!"
-
-source: Rmd
 ---
+:::: questions
+  - "Why are we even visualizing?"
+  - "What are the metadata of this dataset?"
+
+::::
 
 
-```{r, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("00-")
-```
+:::: objectives
+  - "Get to know the importance of visualisations"
+  - "Get to know the data we are going to work with"
+
+::::
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -94,4 +90,9 @@ We are not making art. And if a specific type of plot is useful, we do
 not care if it is actually suitable for the diamond data we are working 
 with.
 
-{% include links.md %}
+:::: keypoints
+  - "This is not an introduction to R"
+  - "Visualisation is a useful way of representing data"
+  - "We are going to study diamonds!"
+
+::::
