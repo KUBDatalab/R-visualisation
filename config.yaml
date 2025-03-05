@@ -61,6 +61,7 @@ contact: 'team@carpentries.org'
 episodes:
 - introduction.Rmd
 - getting_started.Rmd
+- further_mapping.Rmd
 
 # Information for Learners
 learners:
