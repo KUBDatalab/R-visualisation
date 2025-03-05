@@ -113,7 +113,7 @@ ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +
 ```
 
 and
-```{r mapping_equivalency_1, eval = F}
+```{r mapping_equivalency_2, eval = F}
 ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price))
 ```
