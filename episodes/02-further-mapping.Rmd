@@ -108,9 +108,11 @@ we have as many datapoints as we have here, is `alpha`:
 ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
   geom_point(alpha = 0.1)
 ```
+
 `alpha` controls the transparency of the points plotted, and is a handy way of
 handling overplotting, the phenomenon that multiple data points might be 
-identical. 
+identical. In this example we set `alpha` to be 0.1, we could have mapped
+a variable to it instead.
 
 
 :::: callout
