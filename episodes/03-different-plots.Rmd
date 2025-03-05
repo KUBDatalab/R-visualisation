@@ -55,9 +55,8 @@ diamonds %>%
   geom_histogram(bins = 25)
 ```
 
-What number of bins should I choose? There are some general rules for this (some 
-can be found [https://kubdatalab.github.io/forklaringer/12-histogrammer/index.html](here), 
-beware, the page is in Danish.) In general it is our recommendation that you 
+What number of bins should I choose? Some heuristics for choosing does exists, 
+but in general it is our recommendation that you 
 experiment with different number of bins to find the one that best shows your data.
 
 Note that we excluded the `mapping` part of the `ggplot` function. The first
