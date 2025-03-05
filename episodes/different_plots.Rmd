@@ -23,7 +23,6 @@ library(tidyverse)
 ```
 
 
-# A collection of different types of plots
 
 Scatterplots are very useful, but we often need other types of plots. In this 
 part of the course, we are going to look at some of the more common types.
