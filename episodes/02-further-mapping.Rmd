@@ -123,9 +123,12 @@ All geometries in ggplot2 are named using the pattern geom_
 
 ::::
 
-### What kind of shapes can we plot?
+### Using shapes in the plot
 
-In principle any kind of shape. But without having to program them
+Shapes can be useful if we want to make plots that are robust in regards to
+colour reproduction on screens, in printers or for people with reduced
+colour vision.
+In principle we can plot any kind of shape. But without having to program them
 ourself, these are available directly in ggplot. They are numbered, because it is easier to write "14" than "square box with upwardspointing triangle inside".
 
 ```{r point_shapes, echo = F, warning=F, message=F}
