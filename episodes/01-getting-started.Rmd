@@ -36,7 +36,7 @@ weird naming conventions follows from this.
 What we do need to know, is that based on the grammar of graphics, the layered
 structure of a plot using ggplot, is build like this:
 
-```{r eval = F}
+```{r ggplot_structure, eval = F}
 ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) + 
   <GEOM_FUNCTION>(
      mapping = aes(<MAPPINGS>),
@@ -72,7 +72,7 @@ We are going to cover each element in the following.
 The first thing we need to provide for ggplot is some `<DATA>`. We are working with
 the diamond dataset:
 
-```{r}
+```{r first_plot}
 ggplot(data = diamonds)
 ```
 This in itself produces an extremely boring plot. But it is a plot, and actually
@@ -85,7 +85,7 @@ We provide that information to ggplot using the `<MAPPINGS>` argument to the
 ggplot function. Here we want to plot `carat` on the x-axis, and the `price`
 on the y-axis:
 
-```{r}
+```{r second_plot_mapping}
 ggplot(data = diamonds, mapping = aes(x = carat, y = price))
 ```
 
@@ -97,7 +97,7 @@ We would like to make a classic scatter plot, and do that by adding the right
 `<GEOM_FUNCTION>` to our plot. The `<GEOM_FUNCTION>` that do this, is called
 `geom_points()`:
 
-```{r}
+```{r second_plot_point}
 ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +
   geom_point()
 ```
@@ -108,13 +108,13 @@ The `<GEOM_FUNCTION>` will inherit the original mapping, if we do not provide
 a specific mapping for it.
 
 That means that:
-```{r eval = F}
+```{r mapping_equivalency_1, eval = F}
 ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +
   geom_point()
 ```
 
 and
-```{r eval = F}
+```{r mapping_equivalency_1, eval = F}
 ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price))
 ```
@@ -123,7 +123,7 @@ will yield the same result.
 
 We can even provide the same mapping in both places. 
 
-```{r eval = F}
+```{r double_mapping, eval = F}
 ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +
   geom_point(mapping = aes(x = carat, y = price))
 ```
@@ -156,7 +156,7 @@ Note that the correct placement of **+** and linebreaks are very important.
 
 This code will work:
 
-```{r, eval = F}
+```{r plus_location_1, eval = F}
 ggplot() +
   geom_point()
 ```
@@ -164,7 +164,7 @@ ggplot() +
 
 This will not add the new layer and will return an error message:
 
-```{r, eval = F}
+```{r plus_location_2, eval = F}
 ggplot()
   + geom_point()
 ```
@@ -188,4 +188,3 @@ ggplot()
 
 
 
-{% include links.md %}
