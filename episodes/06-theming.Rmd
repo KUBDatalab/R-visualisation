@@ -15,7 +15,7 @@ keypoints:
 source: Rmd
 ---
 
-```{r, include = FALSE}
+```{r options, include = FALSE}
 source("../bin/chunk-options.R")
 knitr_fig_path("06-")
 ```
@@ -33,7 +33,7 @@ The gridlines might be confusing.
 These non-data components of the plots can be controlled using the family of `theme`
 functions:
 
-```{r}
+```{r theme_bw}
 ggplot(diamonds, aes(carat, price)) +
   geom_point() +
   theme_bw()
@@ -100,7 +100,7 @@ void <- base +
 *Every* element in the plot can be controlled. The `theme()`  function is the
 way to do that:
 
-```{r}
+```{r theming}
 diamonds %>% 
   ggplot(aes(carat, price)) +
   geom_point() +
@@ -119,7 +119,7 @@ with a built-in theme that we like, and change the parts we want to change.
 Finally note, that the order is important:
 
 
-```{r eval = F}
+```{r theme_order_matters_1, eval = F}
 diamonds %>% 
   ggplot(aes(carat, price)) +
   geom_point() +
@@ -127,7 +127,7 @@ diamonds %>%
   theme(axis.text.y = element_text(angle= 45))
 ```
 and 
-```{r eval = F}
+```{r theme_order_matters_2, eval = F}
 diamonds %>% 
   ggplot(aes(carat, price)) +
   geom_point() +
@@ -144,7 +144,7 @@ function with specific arguments to specify *what* we want to do. For the backgr
 of the plot we are changing a rectangular object `element_rect`, and can set the background
 color like this: 
 
-```{r}
+```{r background}
 diamonds %>% 
   ggplot(aes(carat, price)) +
   geom_point() +
@@ -155,4 +155,3 @@ Note that we are not setting the `plot.background`, as that would change the
 background of the entire plot, rather than the background of the actual 
 area on which we are plotting.
 
-{% include links.md %}

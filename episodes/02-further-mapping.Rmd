@@ -15,7 +15,7 @@ keypoints:
 source: Rmd
 ---
 
-```{r, include = FALSE}
+```{r options, include = FALSE}
 source("../bin/chunk-options.R")
 knitr_fig_path("02-")
 library(tidyverse)
@@ -29,7 +29,7 @@ We saw how to map data to a position in a scatterplot. But we are able to map
 the data to other elements of a plot, eg the color of the points.
 
 
-```{r chunk1}
+```{r more_mapping}
 ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color)) +
   geom_point() 
 ```
