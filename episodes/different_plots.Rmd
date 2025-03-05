@@ -2,23 +2,20 @@
 title: "Different types of plots"
 teaching: 10
 exercises: 5
-questions:
-- "What other types of plots can we make?"
-- "How can we control the order of stuff in plots?"
-objectives:
-- "Learn how to make histograms, barcharts, boxplots and violinplots"
-keypoints:
-- "Categorical data, aka factors can control the order of data in plots"
-- "ggplot makes it easy to make many different types of plots"
-- "ggplot have many useful extensions"
-
-source: Rmd
 ---
 
-```{r, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("03-")
-```
+:::: questions
+- What other types of plots can we make?
+- How can we control the order of stuff in plots?
+::::
+
+
+:::: objectives
+- Learn how to make histograms, barcharts, boxplots and violinplots
+::::
+
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -26,7 +23,6 @@ library(tidyverse)
 ```
 
 
-# A collection of different types of plots
 
 Scatterplots are very useful, but we often need other types of plots. In this 
 part of the course, we are going to look at some of the more common types.
@@ -39,8 +35,8 @@ Histograms splits all observations of a variable up in a number of
 with a height equivalent to the number of observations for each bin.
 
 Note that we here use the pipe to get the `diamonds` data into `ggplot()`. 
-Both methods can be used, and if we need to manipulate the data before plotting,
-it is a common way to get the modified data into `ggplot()`.
+Both methods can be used. However piping the data into `ggplot()` is useful
+if we need to manipulate the data before plotting, eg. by filtering it.
 
 ```{r histogram}
 diamonds %>% 
@@ -58,9 +54,8 @@ diamonds %>%
   geom_histogram(bins = 25)
 ```
 
-What number of bins should I choose? There are some general rules for this (some 
-can be found [https://kubdatalab.github.io/forklaringer/12-histogrammer/index.html](here), 
-beware, the page is in Danish.) In general it is our recommendation that you 
+What number of bins should I choose? Some heuristics for choosing does exists, 
+but in general it is our recommendation that you 
 experiment with different number of bins to find the one that best shows your data.
 
 Note that we excluded the `mapping` part of the `ggplot` function. The first
@@ -146,17 +141,17 @@ diamonds %>%
 Here we have the variable we are making boxplots of, on the x-axis,
 and splitting them up in one plot per cut, on the y-axis.
 
+:::: callout
+## What is a boxplot?
 
-> ## What is a boxplot?
->
-> Boxplots are useful for showing different distributions. The fat line in
-> the middle of the box is the median, the two ends of the box is first and 
-> third quartile, and the two whiskers (or lines) on both sides of the 
-> box shows the minimum and maximum values - excluding outliers, defined for
-> this purpose as values that lies more that 1.5 times the interquartile 
-> range from the box.
->
-{: .callout}
+Boxplots are useful for showing different distributions. The fat line in
+the middle of the box is the median, the two ends of the box is first and 
+third quartile, and the two whiskers (or lines) on both sides of the 
+box shows the minimum and maximum values - excluding outliers, defined for
+this purpose as values that lies more that 1.5 times the interquartile 
+range from the box.
+
+::::
 
 ## Violinplots
 
@@ -169,20 +164,23 @@ diamonds %>% ggplot(aes(carat, y = cut)) +
   geom_violin()
 ```
 
+:::: challenge
+## Exercise
+The geom_ for making violin plots is `geom_violin`
+Look at the help for `geom_violin` and make a violinplot
+with carat on the x-axis, and cut on the y-axis.
 
-> ## exercise
-> The geom_ for making violin plots is `geom_violin`
-> Look at the help for `geom_violin` and make a violinplot
-> with carat on the x-axis, and cut on the y-axis.
-> > ## Solution
-> >
-> > diamonds %>% 
-> >   ggplot(aes(carat, y = cut)) +
-> >
-> >   geom_violin()
-> >
-> {: .solution}
-{: .challenge}
+:::: solution 
+## Solution
+
+```{r solution, eval = FALSE}
+diamonds %>% 
+ggplot(aes(carat, y = cut)) +
+geom_violin()
+```
+
+::::
+::::
 
 
 
@@ -203,3 +201,8 @@ advanced functionality around plots. Two of the more interesting extensions are:
 
 `gganimate` makes it easyish to make animated plots using ggplot2
 
+:::: keypoints
+- "Categorical data, aka factors can control the order of data in plots"
+- "ggplot makes it easy to make many different types of plots"
+- "ggplot have many useful extensions"
+::::
