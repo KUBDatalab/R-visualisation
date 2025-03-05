@@ -154,7 +154,8 @@ ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
 
 
 
-Other coord_ functions exists.
+Other coord_ functions exists, that does more advanced transformations of
+the coordinate system.
 
 ### Log-scale
 
