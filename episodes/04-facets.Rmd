@@ -2,28 +2,26 @@
 title: "Facetting"
 teaching: 10
 exercises: 5
-questions:
-- "What is facetting?"
-objectives:
-- "Learn to use small multiples in your plots"
-keypoints:
-- "Facetting can make busy plots more understandable"
-- "Grid facetting in two dimensions allows us to plot even more variables"
-
-source: Rmd
 ---
 
-```{r options, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("04-")
-```
+:::: questions
+- "What is facetting?"
+::::
+  
+:::: objectives
+- "Learn to use small multiples in your plots"
+
+::::
+  
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-### Small multiples
+## Small multiples
 
 If we only make one plot we quickly runs into the problem of trying to plot 
 too much information in the plot. Here we plot the price against carat,
@@ -52,17 +50,18 @@ ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
 Here we can see that the price rises more rapidly with size, for the better 
 clarities, something that would have been impossible to see in the previous plot.
 
-> ## Hidden connections
->
-> facet_wrap is specified using the `~clarity` notation. 
-> 
-> This is similar to the way R specifies formulas:
-> 
-> y ~ x would in eg. regressions in R specify that y is a function of x. 
-> 
-> Here we can think of it as "making plots that are a function of clarity"
-> 
-{: .callout}
+:::: callout
+## Hidden connections
+
+facet_wrap is specified using the `~clarity` notation. 
+ 
+This is similar to the way R specifies formulas:
+ 
+y ~ x would in eg. regressions in R specify that y is a function of x. 
+ 
+Here we can think of it as "making plots that are a function of clarity"
+
+::::
 
 The fundamental idea behind faceting, is the concept "small multiples", popularised
 by Edward Tufte. He describes it as (resembling) "the frames of a movie: a series 
@@ -73,27 +72,30 @@ much information, making it possible for the reader of the charts to walk
 through them one category at a time, and make comparisons.
 
 
+:::: challenge
+## Exercise
 
-> ## exercise
->
-> Plot price as a function of depth (price on the y-axis, depth on the x-axis),
-> and facet by cut. If you want a colorful plot, color the points
-> by color.
->
-> > ## Solution
-> >
-> > ggplot(data = diamonds, mapping = aes(x = depth, y = price, color = color)) +
-> >
-> >  geom_point() +
-> >
-> >  facet_wrap(~cut)
-> >
-> > Note that for the better cuts, diamonds are cut to pretty
-> > specific proportions. Worse (Fair) diamonds have more 
-> > varied proportions.
-> >
-> {: .solution}
-{: .challenge}
+Plot price as a function of depth (price on the y-axis, depth on the x-axis),
+and facet by cut. If you want a colorful plot, color the points
+by color.
+
+:::: solution
+## Solution
+
+```{r solution, eval = FALSE}
+ggplot(data = diamonds, mapping = aes(x = depth, y = price, color = color)) +
+  geom_point() +
+  facet_wrap(~cut)
+
+```
+
+
+Note that for the better cuts, diamonds are cut to pretty
+specific proportions. Worse (Fair) diamonds have more 
+varied proportions.
+
+::::
+::::
 
 ## More than one multiple
 
@@ -113,3 +115,9 @@ diamonds %>%
 Be careful using facets, especially *facet_grid* when you work
 with small datasets. You might end up with too little data in 
 each facet.
+
+
+:::: keypoints
+- "Facetting can make busy plots more understandable"
+- "Grid facetting in two dimensions allows us to plot even more variables"
+::::
