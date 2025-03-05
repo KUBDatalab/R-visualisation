@@ -34,7 +34,7 @@ ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color, shape
 ```
 
 This is probably not the best way to discover patterns in the data. It is 
-actually so bad that ggplot warns us that we are using too many different shapes.
+actually so bad that ggplot warns us that we are using too many different shapes!
 
 One way of handling that, is to plot "small multiples" of the data. 
 
