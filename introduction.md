@@ -1,117 +1,108 @@
 ---
-title: 'introduction'
+title: "Before we Start"
 teaching: 10
-exercises: 2
+exercises: 5
 ---
+:::: questions
+  - "Why are we even visualizing?"
+  - "What are the metadata of this dataset?"
 
-:::::::::::::::::::::::::::::::::::::: questions 
-
-- How do you write a lesson using R Markdown and `{sandpaper}`?
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: objectives
-
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Introduction
-
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
-
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
+::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+:::: objectives
+  - "Get to know the importance of visualisations"
+  - "Get to know the data we are going to work with"
 
-:::::::::::::::::::::::: solution 
+::::
 
-You can add a line with at least three colons and a `solution` tag.
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
 
-You can include figures generated from R Markdown:
+
+## Why even visualise data?
+
+Data can be complex. Data can be confusing. And a good visualisation of data
+can reduce some of that complexity and confusion.
+
+A good visualisation can reveal patterns in our data.
+
+A really good visualisation can even provide insight that is difficult, or
+impossible to find without.
+
+A good example is this map, where the English physician John Snow plotted the 
+deaths from Cholera in Soho, London from 19th august to 30th September 1854.
+![John Snow cholera map - Wellcome Trust, (CC BY 4.0) ](../fig/snow_cholera_map.jpg)
+
+The concentration of deaths indicated that the source of the disease was a 
+common water pump. Removing the handle from the pump brought an end to the 
+outbreak.
+
+We are probably not going to discover patterns of equal importance in this course.
+
+
+
+## The dataset we are working with
+
+We are going to study a dataset containing information on prices and other attributes
+of 53940 diamonds. The dataset is included in the `ggplot2` package, that we
+installed as part of `tidyverse`
 
 
 ``` r
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
+library(tidyverse)
+head(diamonds)
 ```
 
-<div class="figure" style="text-align: center">
-<img src="fig/introduction-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid"  />
-<p class="caption">Sun arise each and every morning</p>
-</div>
-Or you can use pandoc markdown for static figures with the following syntax:
+``` output
+# A tibble: 6 × 10
+  carat cut       color clarity depth table price     x     y     z
+  <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>
+1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+```
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+There are 10 variables in the dataset:
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+| Variable | What is it? |
+|----------|-------------|
+| carat    | Weight of the diamond in carat (0.200 gram) |
+| cut      | Quality of the cut of the diamond (Fair, Good, Very Good, Premium, Ideal) | 
+| color    | Color of the diamond from D (best), to J (worst) |
+| clarity  | How clear is the diamond. I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best) |
+| depth    | Total depth percentage = z / mean(x, y) |
+| table    | Width of the top of the diamond relative to its widest point |
+| price    | Price in US dollars |
+| x        | Length in mm | 
+| y        | Width in mm |
+| z        | depth in mm |
 
-## Math
+Slightly more detailed information can be found in the help for the dataset:
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+``` r
+?diamonds
+```
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+## What are we not going to spend time on?
 
-Cool, right?
+There are often several considerations to take into account when we plot.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+Two of those, are not covered here:
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+* Is the plot suitable for the data we are working with?
+* Is the plot looking cool and impressive?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+We are not making art. And if a specific type of plot is useful, we do
+not care if it is actually suitable for the diamond data we are working 
+with.
 
+:::: keypoints
+  - "This is not an introduction to R"
+  - "Visualisation is a useful way of representing data"
+  - "We are going to study diamonds!"
+
+::::
