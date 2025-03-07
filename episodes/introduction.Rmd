@@ -11,11 +11,20 @@ exercises: 5
 
 
 :::: objectives
-  - "Get to know the importance of visualisations"
-  - "Get to know the data we are going to work with"
+- "Get to know the importance of visualisations"
+- "Get to know the data we are going to work with"
 
 ::::
 
+::::instructor
+We have a slight problem with the column `color` in the dataset, which
+can be confusing when we also have a `colour` argument in play.
+
+We try to be consistent in this material, and only use `color` when referring
+to the variable, and the correct spelling when referring to the arguments, or
+the phenomenon "colour".
+
+::::
 
 
 ```{r setup, include=FALSE}
