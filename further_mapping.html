@@ -391,7 +391,7 @@
 </div>
 </div>
 <p>We saw how to map data to a position in a scatterplot. But we are
-able to map the data to other elements of a plot, eg the color of the
+able to map the data to other elements of a plot, eg the colour of the
 points.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -413,18 +413,21 @@ to how to change colours in plots later in this course.</p>
 <div id="spelling" class="callout-inner">
 <h3 class="callout-title">Spelling</h3>
 <div class="callout-content">
-<p>Color, and some other words can be spelled in more than one way. For
-arguments ggplot understands both the correct english spelling
+<p>Colour, and some other words can be spelled in more than one way. For
+arguments, ggplot understands both the correct english spelling
 <em>colour</em> and the american spelling <em>color</em>.</p>
 <p>Note that this only applies to the arguments in the functions. If the
-column in the dataset is called <em>color</em> ggplot will not find it
+column in the dataset is called <em>color</em>, ggplot will not find it
 if you write <em>colour</em> instead.</p>
+<p>In an attempt to reduce confusion, we use <em>colour</em> for the
+arguments and <em>color</em> when we refer to the variable
+<code>color</code>.</p>
 </div>
 </div>
 </div>
-<p>Not surprisingly, the “best” color, D have higher prices than the
-“worst” color, “J”.</p>
-<p>A common mistake is to place the color argument a wrong place:</p>
+<p>Not surprisingly, the “best” colour, D have higher prices than the
+“worst” colour, “J”.</p>
+<p>A common mistake is to place the colour argument a wrong place:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -473,7 +476,7 @@ we have as many datapoints as we have here, is <code>alpha</code>:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></code></pre>
 </div>
 <figure><img src="fig/further_mapping-rendered-unnamed-chunk-2-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p><code>alpha</code> controls the transparency of the points plotted,

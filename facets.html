@@ -390,13 +390,13 @@
 <section><h2 class="section-heading" id="small-multiples">Small multiples<a class="anchor" aria-label="anchor" href="#small-multiples"></a></h2>
 <hr class="half-width"><p>If we only make one plot we quickly runs into the problem of trying
 to plot too much information in the plot. Here we plot the price against
-carat, color by the color of the diamonds. And represent their clarity
-by the shape of the points:</p>
+carat, colour by the <code>color</code> of the diamonds. And represent
+their clarity by the shape of the points:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span>, shape <span class="op">=</span> <span class="va">clarity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span>, shape <span class="op">=</span> <span class="va">clarity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -430,7 +430,7 @@ value of clarity. This is called facetting:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">clarity</span><span class="op">)</span></span></code></pre>
 </div>
@@ -470,8 +470,8 @@ through them one category at a time, and make comparisons.</p>
 <h3 class="callout-title">Exercise</h3>
 <div class="callout-content">
 <p>Plot price as a function of depth (price on the y-axis, depth on the
-x-axis), and facet by cut. If you want a colorful plot, color the points
-by color.</p>
+x-axis), and facet by cut. If you want a colourful plot, colour the
+points by <code>color</code>.</p>
 </div>
 </div>
 </div>
@@ -486,7 +486,7 @@ by color.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">cut</span><span class="op">)</span></span></code></pre>
 </div>
@@ -500,13 +500,14 @@ proportions. Worse (Fair) diamonds have more varied proportions.</p>
 <hr class="half-width"><p>We can expand on the “small multiple” concept, by plotting the facets
 in a grid, defined by two categorical values.</p>
 <p>In this plot we plot price as a function of carate, and make
-individual plots for each combination of clarity and color:</p>
+individual plots for each combination of <code>clarity</code> and
+<code>color</code>:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">diamonds</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">facet_grid</span><span class="op">(</span><span class="va">clarity</span> <span class="op">~</span> <span class="va">color</span><span class="op">)</span></span></code></pre>
 </div>

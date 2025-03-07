@@ -446,9 +446,9 @@ remind ourselves that we are actually mapping data to something.</p>
 <hr class="half-width"><p>Not to be confused with histograms, barcharts count the number of
 observations in different groups. Where the scale in histograms is
 continuous, and split into bins, the scale in barcharts is discrete.</p>
-<p>Here we map the color-variable to the x-axis in the barchart.
-<code>geom_bar</code> counts the number of observations itself - we do
-not need to provide a count:</p>
+<p>Here we map the <code>color</code>-variable to the x-axis in the
+barchart. <code>geom_bar</code> counts the number of observations itself
+- we do not need to provide a count:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -460,17 +460,17 @@ not need to provide a count:</p>
 <figure><img src="fig/different_plots-rendered-bar_charts-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="a-small-excursion">A small excursion<a class="anchor" aria-label="anchor" href="#a-small-excursion"></a></h2>
 <hr class="half-width"><p>Why are the columns in the barchart above in that order?</p>
 <p>One might guess that they are simply in alphabetical order.</p>
-<p>Not so! Color is a categorical variable. Diamonds either have the
-color “D” (which is the best color), or another color (like “J”, which
-is the worst).</p>
-<p>There are no “D.E” colors, they do not exist on a continous
+<p>Not so! <code>color</code> is a categorical variable. Diamonds either
+have the colour “D” (which is the best colour), or another colour (like
+“J”, which is the worst).</p>
+<p>There are no “D.E” colours, they do not exist on a continuous
 range.</p>
 <p>This is called “factors” in R. The data in a factor can take one of
 several values, called levels. And the order of these levels are what
 control the order in the plot.</p>
 <p>The order can be either arbitrary, or there can exist an implicit
-order in the data, like with the color of the diamonds, where D is the
-best color, and J is the worst. These types of ordered categorical data
+order in the data, like with the colour of the diamonds, where D is the
+best colour, and J is the worst. These types of ordered categorical data
 are called ordinal data.</p>
 <p>They look like this:</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -490,7 +490,7 @@ are called ordinal data.</p>
  $ clarity: Ord.factor w/ 8 levels "I1"&lt;"SI2"&lt;"SI1"&lt;..: 2 3 5 4 2 6 7 3 4 5 ...</code></pre>
 </div>
 <p>Note that even though the colour “D” is better than “E”, the levels
-of the color factor indicates that “D&lt;E”.</p>
+of the <code>color</code> factor indicates that “D&lt;E”.</p>
 <p>All this just to say: We can control the order of columns in the
 plot, by controlling the order of the levels of the categorical value we
 are plotting:</p>

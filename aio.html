@@ -502,7 +502,7 @@ Ideal)</td>
 </tr>
 <tr class="odd">
 <td>color</td>
-<td>Color of the diamond from D (best), to J (worst)</td>
+<td>Colour of the diamond from D (best), to J (worst)</td>
 </tr>
 <tr class="even">
 <td>clarity</td>
@@ -646,7 +646,7 @@ here.</p>
 <h3 class="callout-title">What is the difference?</h3>
 <div class="callout-content">
 <p>ggplot2 is the library, containing different types of functions for
-plotting, theming the plots, changing colors and lots of other
+plotting, theming the plots, changing colours and lots of other
 stuff.</p>
 <p>ggplot is one of these functions in ggplot2, and the one that begins
 every plot we make.</p>
@@ -853,7 +853,7 @@ any links that you are not going to use.
 </div>
 </div>
 <p>We saw how to map data to a position in a scatterplot. But we are
-able to map the data to other elements of a plot, eg the color of the
+able to map the data to other elements of a plot, eg the colour of the
 points.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -875,18 +875,21 @@ to how to change colours in plots later in this course.</p>
 <div id="spelling" class="callout-inner">
 <h3 class="callout-title">Spelling</h3>
 <div class="callout-content">
-<p>Color, and some other words can be spelled in more than one way. For
-arguments ggplot understands both the correct english spelling
+<p>Colour, and some other words can be spelled in more than one way. For
+arguments, ggplot understands both the correct english spelling
 <em>colour</em> and the american spelling <em>color</em>.</p>
 <p>Note that this only applies to the arguments in the functions. If the
-column in the dataset is called <em>color</em> ggplot will not find it
+column in the dataset is called <em>color</em>, ggplot will not find it
 if you write <em>colour</em> instead.</p>
+<p>In an attempt to reduce confusion, we use <em>colour</em> for the
+arguments and <em>color</em> when we refer to the variable
+<code>color</code>.</p>
 </div>
 </div>
 </div>
-<p>Not surprisingly, the “best” color, D have higher prices than the
-“worst” color, “J”.</p>
-<p>A common mistake is to place the color argument a wrong place:</p>
+<p>Not surprisingly, the “best” colour, D have higher prices than the
+“worst” colour, “J”.</p>
+<p>A common mistake is to place the colour argument a wrong place:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -941,7 +944,7 @@ we have as many datapoints as we have here, is <code>alpha</code>:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></code></pre>
 </div>
 <figure><img src="fig/further_mapping-rendered-unnamed-chunk-2-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p><code>alpha</code> controls the transparency of the points plotted,
@@ -1086,9 +1089,9 @@ remind ourselves that we are actually mapping data to something.</p>
 <p>Not to be confused with histograms, barcharts count the number of
 observations in different groups. Where the scale in histograms is
 continuous, and split into bins, the scale in barcharts is discrete.</p>
-<p>Here we map the color-variable to the x-axis in the barchart.
-<code>geom_bar</code> counts the number of observations itself - we do
-not need to provide a count:</p>
+<p>Here we map the <code>color</code>-variable to the x-axis in the
+barchart. <code>geom_bar</code> counts the number of observations itself
+- we do not need to provide a count:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1102,17 +1105,17 @@ not need to provide a count:</p>
 <hr class="half-width">
 <p>Why are the columns in the barchart above in that order?</p>
 <p>One might guess that they are simply in alphabetical order.</p>
-<p>Not so! Color is a categorical variable. Diamonds either have the
-color “D” (which is the best color), or another color (like “J”, which
-is the worst).</p>
-<p>There are no “D.E” colors, they do not exist on a continous
+<p>Not so! <code>color</code> is a categorical variable. Diamonds either
+have the colour “D” (which is the best colour), or another colour (like
+“J”, which is the worst).</p>
+<p>There are no “D.E” colours, they do not exist on a continuous
 range.</p>
 <p>This is called “factors” in R. The data in a factor can take one of
 several values, called levels. And the order of these levels are what
 control the order in the plot.</p>
 <p>The order can be either arbitrary, or there can exist an implicit
-order in the data, like with the color of the diamonds, where D is the
-best color, and J is the worst. These types of ordered categorical data
+order in the data, like with the colour of the diamonds, where D is the
+best colour, and J is the worst. These types of ordered categorical data
 are called ordinal data.</p>
 <p>They look like this:</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -1132,7 +1135,7 @@ are called ordinal data.</p>
  $ clarity: Ord.factor w/ 8 levels "I1"&lt;"SI2"&lt;"SI1"&lt;..: 2 3 5 4 2 6 7 3 4 5 ...</code></pre>
 </div>
 <p>Note that even though the colour “D” is better than “E”, the levels
-of the color factor indicates that “D&lt;E”.</p>
+of the <code>color</code> factor indicates that “D&lt;E”.</p>
 <p>All this just to say: We can control the order of columns in the
 plot, by controlling the order of the levels of the categorical value we
 are plotting:</p>
@@ -1293,13 +1296,13 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>If we only make one plot we quickly runs into the problem of trying
 to plot too much information in the plot. Here we plot the price against
-carat, color by the color of the diamonds. And represent their clarity
-by the shape of the points:</p>
+carat, colour by the <code>color</code> of the diamonds. And represent
+their clarity by the shape of the points:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span>, shape <span class="op">=</span> <span class="va">clarity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span>, shape <span class="op">=</span> <span class="va">clarity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -1333,7 +1336,7 @@ value of clarity. This is called facetting:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">clarity</span><span class="op">)</span></span></code></pre>
 </div>
@@ -1373,8 +1376,8 @@ through them one category at a time, and make comparisons.</p>
 <h3 class="callout-title">Exercise</h3>
 <div class="callout-content">
 <p>Plot price as a function of depth (price on the y-axis, depth on the
-x-axis), and facet by cut. If you want a colorful plot, color the points
-by color.</p>
+x-axis), and facet by cut. If you want a colourful plot, colour the
+points by <code>color</code>.</p>
 </div>
 </div>
 </div>
@@ -1389,7 +1392,7 @@ by color.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">depth</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">cut</span><span class="op">)</span></span></code></pre>
 </div>
@@ -1405,13 +1408,14 @@ proportions. Worse (Fair) diamonds have more varied proportions.</p>
 <p>We can expand on the “small multiple” concept, by plotting the facets
 in a grid, defined by two categorical values.</p>
 <p>In this plot we plot price as a function of carate, and make
-individual plots for each combination of clarity and color:</p>
+individual plots for each combination of <code>clarity</code> and
+<code>color</code>:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">diamonds</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">facet_grid</span><span class="op">(</span><span class="va">clarity</span> <span class="op">~</span> <span class="va">color</span><span class="op">)</span></span></code></pre>
 </div>
@@ -1455,7 +1459,7 @@ any links that you are not going to use.
 <ul>
 <li>“How can we adjust the scales in a plot?”</li>
 <li>“How can we zoom-in to specific parts of a plot?”</li>
-<li>“How can we change the colors of the plot?”</li>
+<li>“How can we change the colours of the plot?”</li>
 <li>“How do I make a pie-chart?”</li>
 </ul>
 </div>
@@ -1469,7 +1473,7 @@ any links that you are not going to use.
 <li>“Learn to zoom by adjusting scales”</li>
 <li>“Learn how to make log-scale plots”</li>
 <li>“Learn why you should not make a pie-chart”</li>
-<li>“Learn how to control the color-scale”</li>
+<li>“Learn how to control the colour-scale”</li>
 </ul>
 </div>
 </div>
@@ -1624,7 +1628,7 @@ function that changes the coordinate system:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">coord_flip</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
@@ -1675,7 +1679,7 @@ y-axis) with both axes log transformed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1699,7 +1703,7 @@ y-axis) with both axes log transformed.</p>
 defined by making a stacked bar-chart, and changing the coordinate
 system to polar.</p>
 <p>We begin by filtering the data set to only include diamonds with the
-color “G”, and then make a barchart. We add the argument
+<code>color</code> “G”, and then make a barchart. We add the argument
 <code>position = "stack"</code> to <code>geom_bar</code> to stack the
 bars rather than having them side by side. And then we adjust the
 coordinate system to be polar (the y-axis specifically), beginning at
@@ -1711,7 +1715,7 @@ coordinate system to be polar (the y-axis specifically), beginning at
 <code class="sourceCode R"><span><span class="va">diamonds</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>color <span class="op">=</span> <span class="fu">as.character</span><span class="op">(</span><span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">filter</span><span class="op">(</span><span class="va">color</span> <span class="op">==</span> <span class="st">"G"</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span> <span class="va">color</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">color</span>, fill <span class="op">=</span> <span class="va">cut</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"stack"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">coord_polar</span><span class="op">(</span><span class="st">"y"</span>, start<span class="op">=</span><span class="fl">0</span><span class="op">)</span> </span></code></pre>
 </div>
@@ -1720,7 +1724,7 @@ coordinate system to be polar (the y-axis specifically), beginning at
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are polar coordinates? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Our ordinary coordinate system is a cartesian coordinate system. Each
 point in the system are defined by two values, X and Y, representing the
@@ -1759,7 +1763,7 @@ EXTREME caution.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="coloring-the-scale">Coloring the scale<a class="anchor" aria-label="anchor" href="#coloring-the-scale"></a>
+</section><section><h2 class="section-heading" id="colouring-the-scale">Colouring the scale<a class="anchor" aria-label="anchor" href="#colouring-the-scale"></a>
 </h2>
 <hr class="half-width">
 <p>Looking at the plot below, the authors of this course get pretty
@@ -1768,53 +1772,54 @@ frustrated.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> </span></code></pre>
 </div>
-<figure><img src="fig/scaling-and-coordinates-rendered-scale_color-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>We are not really able to distinquish the color for “D” and “E”. Or
-for “G” and “H”. Controlling the colors is important not only for
+<figure><img src="fig/scaling-and-coordinates-rendered-scale_colour-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>We are not really able to distinquish the colour for “D” and “E”. Or
+for “G” and “H”. Controlling the colours is important not only for
 aesthetic reasons, but also for actually illustrating what the plot is
 showing.</p>
-<p>Here, the color is introduced by mapping the color of the diamonds to
-the coloring of the points. This actually is mapping a value to a scale,
-no different from the mapping of the price to the y-axis.</p>
+<p>Here, the colour is introduced by mapping the <code>color</code> of
+the diamonds to the colouring of the points. This actually is mapping a
+value to a scale, no different from the mapping of the price to the
+y-axis.</p>
 <p>In the same way we can adjust the scale of the y-axis as shown above,
-we are able to adjust the actual colors in the plot.</p>
+we are able to adjust the actual colours in the plot.</p>
 <p>The functions for this are (almost) all called <code>scale_</code>
-and then continues with <code>color</code> if we are coloring points,
-<code>fill</code> if we want to control the fill-color of a solid object
-in the plot, and finally something that specifies either the type of
-data we are plotting, or specific functionality to control the
-color.</p>
-<p>Below we adjust the color using the special family of functions
-<code>brewer</code>: <code>scale_color_brewer</code>. Nice colors, but
+and then continues with <code>colour</code> if we are colouring points,
+<code>fill</code> if we want to control the fill-colour of a solid
+object in the plot, and finally something that specifies either the type
+of data we are plotting, or specific functionality to control the
+colour.</p>
+<p>Below we adjust the colour using the special family of functions
+<code>brewer</code>: <code>scale_colour_brewer</code>. Nice colours, but
 even worse:</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">scale_color_brewer</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_colour_brewer</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">theme</span><span class="op">(</span>panel.background <span class="op">=</span> <span class="fu">element_rect</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<p><img src="fig/scaling-and-coordinates-rendered-color_brewer-1.png" style="display: block; margin: auto;" class="figure">
+<p><img src="fig/scaling-and-coordinates-rendered-colour_brewer-1.png" style="display: block; margin: auto;" class="figure">
 What we did to change the background will be covered in the next
 episode.</p>
-<p>Finding the optimal colors usually requires a lot of fiddling around.
-Rather than using functions to choose the colors, we can chose the
-manually, like this:</p>
+<p>Finding the optimal colours usually requires a lot of fiddling
+around. Rather than using functions to choose the colours, we can choose
+them manually, like this:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, color <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">scale_color_manual</span><span class="op">(</span>values<span class="op">=</span><span class="fu">c</span><span class="op">(</span><span class="st">'#7fc97f'</span>,<span class="st">'#beaed4'</span>,<span class="st">'#fdc086'</span>,<span class="st">'#ffff99'</span>,<span class="st">'#386cb0'</span>,<span class="st">'#f0027f'</span>,<span class="st">'#bf5b17'</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<span>  <span class="fu">scale_colour_manual</span><span class="op">(</span>values<span class="op">=</span><span class="fu">c</span><span class="op">(</span><span class="st">'#7fc97f'</span>,<span class="st">'#beaed4'</span>,<span class="st">'#fdc086'</span>,<span class="st">'#ffff99'</span>,<span class="st">'#386cb0'</span>,<span class="st">'#f0027f'</span>,<span class="st">'#bf5b17'</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/scaling-and-coordinates-rendered-manual_colors-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The codes #7fc97f are “hex-codes”, specifying the colors. You can
-find websites allowing you to chose a color, and get the code. A good
-place to get suggestions for color-pallettes is <a href="https://colorbrewer2.org/" class="external-link">Colorbrewer2</a>.</p>
+<figure><img src="fig/scaling-and-coordinates-rendered-manual_colours-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The codes #7fc97f are “hex-codes”, specifying the colours. You can
+find websites allowing you to chose a colour, and get the code. A good
+place to get suggestions for colour-pallettes is <a href="https://colorbrewer2.org/" class="external-link">Colorbrewer2</a>.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1825,7 +1830,7 @@ place to get suggestions for color-pallettes is <a href="https://colorbrewer2.or
 <ul>
 <li>“Pie charts are a bad idea!”</li>
 <li>“Zooming might exclude data if done wrong”</li>
-<li>“Play around to find the colors you like”</li>
+<li>“Play around to find the colours you like”</li>
 </ul>
 </div>
 </div>
@@ -1959,7 +1964,7 @@ special way. If we want the “theme” a text element, we set the
 <code>axis.text</code> to be an <code>element_text()</code> function
 with specific arguments to specify <em>what</em> we want to do. For the
 background of the plot we are changing a rectangular object
-<code>element_rect</code>, and can set the background color like
+<code>element_rect</code>, and can set the background colour like
 this:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
