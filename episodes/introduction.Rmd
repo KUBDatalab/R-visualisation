@@ -63,7 +63,7 @@ There are 10 variables in the dataset:
 |----------|-------------|
 | carat    | Weight of the diamond in carat (0.200 gram) |
 | cut      | Quality of the cut of the diamond (Fair, Good, Very Good, Premium, Ideal) | 
-| color    | Color of the diamond from D (best), to J (worst) |
+| color    | Colour of the diamond from D (best), to J (worst) |
 | clarity  | How clear is the diamond. I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best) |
 | depth    | Total depth percentage = z / mean(x, y) |
 | table    | Width of the top of the diamond relative to its widest point |
