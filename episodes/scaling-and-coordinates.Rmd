@@ -2,39 +2,36 @@
 title: "Scaling and coordinates"
 teaching: 10
 exercises: 5
-questions:
+---
+
+:::: questions
 - "How can we adjust the scales in a plot?"
 - "How can we zoom-in to specific parts of a plot?"
 - "How can we change the colors of the plot?"
 - "How do I make a pie-chart?"
-objectives:
+::::
+
+::::objectives
 - "Learn to zoom by adjusting scales"
 - "Learn how to make log-scale plots"
 - "Learn why you should not make a pie-chart"
 - "Learn how to control the color-scale"
-keypoints:
-- "Pie charts are a bad idea!"
-- "Zooming might exclude data if done wrong"
-- "Play around to find the colors you like"
+:::: 
 
-source: Rmd
----
 
-```{r, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("05-")
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(patchwork)
 ```
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## Changing scale and coordinates
 
-ggplot choses a coordinate system for us. Like bins in 
-histograms, that coordinate system might not be the right for
+ggplot chooses a coordinate system for us. Like bins in 
+histograms, that coordinate system might not be the right one for
 our data.
 
 One of the more commonly cited "rules" for plots and graphs is
@@ -59,7 +56,6 @@ diamonds %>%
   geom_point() +
   xlim(c(0,80)) +
   ylim(c(0,100))
-
 ```
 
 It is nice to be able to control the two axes seperately. 
@@ -182,26 +178,30 @@ This plot reveals a gap in the prices. There are no diamonds in this dataset
 with a price between 1454 USD and 1546 USD. The educated guess is an error in 
 the original dataset.
 
-> ## exercise
->
-> Try to plot price against carat (carat on the x-axis, and price on y-axis) 
-> with both axes log transformed.
-> 
-> What new insights do we gain?
->
-> > ## Solution
-> >
-> > ggplot(data = diamonds, mapping = aes(x = depth, y = price)) +
-> >
-> >  scale_x_log10() +
-> >
-> >  scale_y_log10()
-> >
-> > The correlation between carat and price appears to be roughly linear
-> > (with a lot of noise) then both carat and price are log transformed.
-> >
-> {: .solution}
-{: .challenge}
+:::: challenge
+## exercise
+
+Try to plot price against carat (carat on the x-axis, and price on y-axis) 
+with both axes log transformed.
+
+What new insights do we gain?
+
+::::solution
+## Solution
+
+```{r eval = FALSE}
+ggplot(data = diamonds, mapping = aes(x = depth, y = price)) +
+  scale_x_log10() +
+  scale_y_log10()
+
+```
+
+
+The correlation between carat and price appears to be roughly linear
+(with a lot of noise) then both carat and price are log transformed.
+
+::::
+::::
 
 
 
@@ -228,39 +228,41 @@ diamonds %>%
   coord_polar("y", start=0) 
 ```
 
-> ## What are polar coordinates?
->
-> Our ordinary coordinate system is a cartesian coordinate system. 
-> Each point in the system are defined by two values, X and Y, representing 
-> the distance from the origin or reference point of the coordinate system.
-> 
-> In a polar coordinate system, each point in the plane is defined by two values: 
-> radius (r) and angle (θ). The radius represents the distance from a reference 
-> point (called the pole) to the point in question, and the angle is the angle 
-> formed between the positive x-axis (in ggplot2, this is usually the horizontal
-> axis) and the line connecting the pole to the point.
->
-> In a polar coordinate system, we still have a point of origin, 0,0
-> but now the points are plottet using an angle from the x-axis and a 
-> distance 
-> 
-{: .callout}
 
+:::: spoiler
+## What are polar coordinates?
 
-> ## Why does geom_pie() not exist?
-> 
-> ggplot2 is an opinionated package. It forces us to think about including 0,0
-> in our plots. When we make histograms, the number of bins are chosen to 
-> be particularly bad, so we have to choose something different.
->
-> And piecharts are a very bad idea. They map values to an
-> angle in the plot, and humans are not very good at seeing the difference
-> between two angles. 
->
-> Rare exceptions exists. But making pie charts should be done with EXTREME caution.
->
->
-{: .caution}
+Our ordinary coordinate system is a cartesian coordinate system. 
+Each point in the system are defined by two values, X and Y, representing 
+the distance from the origin or reference point of the coordinate system.
+
+In a polar coordinate system, each point in the plane is defined by two values: 
+radius (r) and angle (θ). The radius represents the distance from a reference 
+point (called the pole) to the point in question, and the angle is the angle 
+formed between the positive x-axis (in ggplot2, this is usually the horizontal
+axis) and the line connecting the pole to the point.
+
+In a polar coordinate system, we still have a point of origin, 0,0
+but now the points are plottet using an angle from the x-axis and a 
+distance 
+
+::::
+
+::::callout
+## Why does geom_pie() not exist?
+
+ggplot2 is an opinionated package. It forces us to think about including 0,0
+in our plots. When we make histograms, the number of bins are chosen to 
+be particularly bad, so we have to choose something different.
+
+And piecharts are a very bad idea. They map values to an
+angle in the plot, and humans are not very good at seeing the difference
+between two angles. 
+
+Rare exceptions exists. But making pie charts should be done with EXTREME caution.
+
+::::
+
 
 ## Coloring the scale
 
@@ -315,3 +317,8 @@ allowing you to chose a color, and get the code. A good place to get suggestions
 for color-pallettes is [Colorbrewer2](https://colorbrewer2.org/).
 
 
+:::: keypoints
+- "Pie charts are a bad idea!"
+- "Zooming might exclude data if done wrong"
+- "Play around to find the colors you like"
+::::

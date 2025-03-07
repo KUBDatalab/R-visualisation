@@ -27,7 +27,7 @@ life_cycle: 'pre-alpha'
 license: 'CC BY-NC-SA 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/chrbknudsen/R-visualisation_new'
+source: 'https://github.com/kubdatalab/R-visualisation_new'
 
 # Default branch of your lesson
 branch: 'main'
@@ -64,6 +64,7 @@ episodes:
 - further_mapping.Rmd
 - different_plots.Rmd
 - facets.Rmd
+- scaling-and-coordinates.Rmd
 
 # Information for Learners
 learners:
