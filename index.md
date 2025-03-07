@@ -43,4 +43,10 @@ our <a href="https://kubdatalab.github.io/R-intro/" target="_blank">introductory
 
 :::::::::::::::::::::::::
 
+::::spoiler
+## Where is the old version?
 
+We have updated the look of this course. If you need to access the old
+version, you can find it following [this link.](https://kubdatalab.github.io/R-visualisation_old/)
+
+::::
