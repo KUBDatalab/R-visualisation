@@ -104,7 +104,7 @@ Most of the `elements` of the plot need to be defined in a special way. If we
 want the "theme" a text element, we set the `axis.text` to be an `element_text()` 
 function with specific arguments to specify *what* we want to do. For the background
 of the plot we are changing a rectangular object `element_rect`, and can set the background
-color like this: 
+colour like this: 
 
 
 ``` r

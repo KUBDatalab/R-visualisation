@@ -22,12 +22,12 @@ exercises: 5
 
 If we only make one plot we quickly runs into the problem of trying to plot 
 too much information in the plot. Here we plot the price against carat,
-color by the color of the diamonds. And represent their clarity by the
+colour by the `color` of the diamonds. And represent their clarity by the
 shape of the points:
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color, shape = clarity)) +
+ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color, shape = clarity)) +
   geom_point()
 ```
 
@@ -60,7 +60,7 @@ clarity. This is called facetting:
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
+ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color)) +
   geom_point() +
   facet_wrap(~clarity)
 ```
@@ -95,15 +95,15 @@ through them one category at a time, and make comparisons.
 ## Exercise
 
 Plot price as a function of depth (price on the y-axis, depth on the x-axis),
-and facet by cut. If you want a colorful plot, color the points
-by color.
+and facet by cut. If you want a colourful plot, colour the points
+by `color`.
 
 :::: solution
 ## Solution
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = depth, y = price, color = color)) +
+ggplot(data = diamonds, mapping = aes(x = depth, y = price, colour = color)) +
   geom_point() +
   facet_wrap(~cut)
 ```
@@ -122,12 +122,12 @@ We can expand on the "small multiple" concept, by plotting the
 facets in a grid, defined by two categorical values.
 
 In this plot we plot price as a function of carate, and 
-make individual plots for each combination of clarity and color:
+make individual plots for each combination of `clarity` and `color`:
 
 
 ``` r
 diamonds %>% 
-  ggplot(aes(x = carat, y = price, color = color)) +
+  ggplot(aes(x = carat, y = price, colour = color)) +
     geom_point() +
     facet_grid(clarity ~ color)
 ```

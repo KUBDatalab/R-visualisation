@@ -7,7 +7,7 @@ exercises: 5
 :::: questions
 - "How can we adjust the scales in a plot?"
 - "How can we zoom-in to specific parts of a plot?"
-- "How can we change the colors of the plot?"
+- "How can we change the colours of the plot?"
 - "How do I make a pie-chart?"
 ::::
 
@@ -15,7 +15,7 @@ exercises: 5
 - "Learn to zoom by adjusting scales"
 - "Learn how to make log-scale plots"
 - "Learn why you should not make a pie-chart"
-- "Learn how to control the color-scale"
+- "Learn how to control the colour-scale"
 :::: 
 
 
@@ -177,7 +177,7 @@ Or we could add a coordinate function that changes the coordinate system:
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
+ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color)) +
   geom_point() +
   coord_flip()
 ```
@@ -252,7 +252,7 @@ can be defined by making a stacked bar-chart, and changing the
 coordinate system to polar.
 
 We begin by filtering the data set to only include diamonds
-with the color "G", and then make a barchart. We add the 
+with the `color` "G", and then make a barchart. We add the 
 argument `position = "stack"` to `geom_bar` to stack the bars
 rather than having them side by side. And then we adjust
 the coordinate system to be polar (the y-axis specifically), 
@@ -263,7 +263,7 @@ beginning at 0:
 diamonds %>% 
   mutate(color = as.character(color)) %>% 
   filter(color == "G") %>% 
-  ggplot(aes(x= color, fill = cut)) +
+  ggplot(aes(x = color, fill = cut)) +
   geom_bar(position = "stack") +
   coord_polar("y", start=0) 
 ```
@@ -306,70 +306,70 @@ Rare exceptions exists. But making pie charts should be done with EXTREME cautio
 ::::
 
 
-## Coloring the scale
+## Colouring the scale
 
 Looking at the plot below, the authors of this course get pretty frustrated.
 
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
+ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color)) +
   geom_point() 
 ```
 
-<img src="fig/scaling-and-coordinates-rendered-scale_color-1.png" style="display: block; margin: auto;" />
+<img src="fig/scaling-and-coordinates-rendered-scale_colour-1.png" style="display: block; margin: auto;" />
 
-We are not really able to distinquish the color for "D" and "E". Or for "G" and
-"H". Controlling the colors is important not only for aesthetic reasons, but
+We are not really able to distinquish the colour for "D" and "E". Or for "G" and
+"H". Controlling the colours is important not only for aesthetic reasons, but
 also for actually illustrating what the plot is showing.
 
-Here, the color is introduced by mapping the color of the diamonds to the 
-coloring of the points. This actually is mapping a value to a scale, no different
+Here, the colour is introduced by mapping the `color` of the diamonds to the 
+colouring of the points. This actually is mapping a value to a scale, no different
 from the mapping of the price to the y-axis.
 
 In the same way we can adjust the scale of the y-axis as shown above, we are
-able to adjust the actual colors in the plot. 
+able to adjust the actual colours in the plot. 
 
 The functions for this are (almost) all called `scale_` and then continues
-with `color` if we are coloring points, `fill` if we want to control the 
-fill-color of a solid object in the plot, and finally something that specifies
+with `colour` if we are colouring points, `fill` if we want to control the 
+fill-colour of a solid object in the plot, and finally something that specifies
 either the type of data we are plotting, or specific functionality to control 
-the color. 
+the colour. 
 
-Below we adjust the color using the special family of functions `brewer`:
-`scale_color_brewer`. Nice colors, but even worse:
+Below we adjust the colour using the special family of functions `brewer`:
+`scale_colour_brewer`. Nice colours, but even worse:
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
+ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color)) +
   geom_point() +
-  scale_color_brewer() +
+  scale_colour_brewer() +
   theme(panel.background = element_rect(fill = "black"))
 ```
 
-<img src="fig/scaling-and-coordinates-rendered-color_brewer-1.png" style="display: block; margin: auto;" />
+<img src="fig/scaling-and-coordinates-rendered-colour_brewer-1.png" style="display: block; margin: auto;" />
 What we did to change the background will be covered in the next episode.
 
-Finding the optimal colors usually requires a lot of fiddling around. Rather
-than using functions to choose the colors, we can chose the manually, 
+Finding the optimal colours usually requires a lot of fiddling around. Rather
+than using functions to choose the colours, we can choose them manually, 
 like this:
 
 
 ``` r
-ggplot(data = diamonds, mapping = aes(x = carat, y = price, color = color)) +
+ggplot(data = diamonds, mapping = aes(x = carat, y = price, colour = color)) +
   geom_point() +
-  scale_color_manual(values=c('#7fc97f','#beaed4','#fdc086','#ffff99','#386cb0','#f0027f','#bf5b17'))
+  scale_colour_manual(values=c('#7fc97f','#beaed4','#fdc086','#ffff99','#386cb0','#f0027f','#bf5b17'))
 ```
 
-<img src="fig/scaling-and-coordinates-rendered-manual_colors-1.png" style="display: block; margin: auto;" />
+<img src="fig/scaling-and-coordinates-rendered-manual_colours-1.png" style="display: block; margin: auto;" />
 
-The codes #7fc97f are "hex-codes", specifying the colors. You can find websites
-allowing you to chose a color, and get the code. A good place to get suggestions
-for color-pallettes is [Colorbrewer2](https://colorbrewer2.org/).
+The codes #7fc97f are "hex-codes", specifying the colours. You can find websites
+allowing you to chose a colour, and get the code. A good place to get suggestions
+for colour-pallettes is [Colorbrewer2](https://colorbrewer2.org/).
 
 
 :::: keypoints
 - "Pie charts are a bad idea!"
 - "Zooming might exclude data if done wrong"
-- "Play around to find the colors you like"
+- "Play around to find the colours you like"
 ::::

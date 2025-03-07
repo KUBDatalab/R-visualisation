@@ -55,7 +55,7 @@ We are going to cover each element in the following.
 ## What is the difference?
 
 ggplot2 is the library, containing different types of 
-functions for plotting, theming the plots, changing colors and lots of other stuff.
+functions for plotting, theming the plots, changing colours and lots of other stuff.
 
 ggplot is one of these functions in ggplot2, and the one that begins every plot we make.
 
