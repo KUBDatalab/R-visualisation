@@ -73,7 +73,7 @@ Not to be confused with histograms, barcharts count the number of
 observations in different groups. Where the scale in histograms is 
 continuous, and split into bins, the scale in barcharts is discrete. 
 
-Here we map the color-variable to the x-axis in the barchart. `geom_bar` counts 
+Here we map the `color`-variable to the x-axis in the barchart. `geom_bar` counts 
 the number of observations itself - we do not need to
 provide a count:
 
@@ -89,17 +89,17 @@ Why are the columns in the barchart above in that order?
 
 One might guess that they are simply in alphabetical order. 
 
-Not so! Color is a categorical variable. Diamonds either have the color 
-"D" (which is the best color), or another color (like "J", which is the worst).
+Not so! `color` is a categorical variable. Diamonds either have the colour 
+"D" (which is the best colour), or another colour (like "J", which is the worst).
 
-There are no "D.E" colors, they do not exist on a continous range.
+There are no "D.E" colours, they do not exist on a continuous range.
 
 This is called "factors" in R.
 The data in a factor can take one of several values, called levels. And the
 order of these levels are what control the order in the plot.
 
 The order can be either arbitrary, or there can exist an implicit order in the 
-data, like with the color of the diamonds, where D is the best color, and J is 
+data, like with the colour of the diamonds, where D is the best colour, and J is 
 the worst. These types of ordered categorical data are called ordinal data.
 
 They look like this:
@@ -109,7 +109,7 @@ diamonds %>%
   str()
 ```
 Note that even though the colour "D" is better than "E", the levels 
-of the color factor indicates that "D<E". 
+of the `color` factor indicates that "D<E". 
 
 All this just to say: We can control the order of columns in the plot, by
 controlling the order of the levels of the categorical value we are plotting:

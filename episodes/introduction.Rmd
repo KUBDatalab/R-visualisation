@@ -11,11 +11,20 @@ exercises: 5
 
 
 :::: objectives
-  - "Get to know the importance of visualisations"
-  - "Get to know the data we are going to work with"
+- "Get to know the importance of visualisations"
+- "Get to know the data we are going to work with"
 
 ::::
 
+::::instructor
+We have a slight problem with the column `color` in the dataset, which
+can be confusing when we also have a `colour` argument in play.
+
+We try to be consistent in this material, and only use `color` when referring
+to the variable, and the correct spelling when referring to the arguments, or
+the phenomenon "colour".
+
+::::
 
 
 ```{r setup, include=FALSE}
@@ -63,7 +72,7 @@ There are 10 variables in the dataset:
 |----------|-------------|
 | carat    | Weight of the diamond in carat (0.200 gram) |
 | cut      | Quality of the cut of the diamond (Fair, Good, Very Good, Premium, Ideal) | 
-| color    | Color of the diamond from D (best), to J (worst) |
+| color    | Colour of the diamond from D (best), to J (worst) |
 | clarity  | How clear is the diamond. I1 (worst), SI2, SI1, VS2, VS1, VVS2, VVS1, IF (best) |
 | depth    | Total depth percentage = z / mean(x, y) |
 | table    | Width of the top of the diamond relative to its widest point |
