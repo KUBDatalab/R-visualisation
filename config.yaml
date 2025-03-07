@@ -65,6 +65,9 @@ episodes:
 - different_plots.Rmd
 - facets.Rmd
 - scaling-and-coordinates.Rmd
+- theming.Rmd
+- saving.Rmd
+- whats-next.Rmd
 
 # Information for Learners
 learners:

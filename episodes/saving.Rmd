@@ -2,20 +2,17 @@
 title: "Saving and exporting"
 teaching: 5
 exercises: 0
-questions:
-- "How can I save the plots?"
-objectives:
-- "Learn how to save your plots in different formats"
-keypoints:
-- "The easiest way to adjust the size of your saved plots is by adjusting the plot window in RStudio"
-
-source: Rmd
 ---
 
-```{r, include = FALSE}
-source("../bin/chunk-options.R")
-knitr_fig_path("08-")
-```
+::::questions
+- "How can I save the plots?"
+::::
+
+::::objectives
+- "Learn how to save your plots in different formats"
+::::
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -33,6 +30,7 @@ RStudio
 ggplot2 also includes a function for saving the last plot
 you made. This function will save it as "myimage.png" in your
 current directory. The image will be 800x600 pixels (px) in size, and with a resolution of 300 dpi.
+
 ```{r save-image, eval = F}
 ggsave("myimage.png", width = 800, 
        height = 600, units = "px",
@@ -73,4 +71,6 @@ to these formats:
 We would like to recommend the "svg" format. That format is a "vector-based" format
 that you can scale to any size you want.
 
-{% include links.md %}
+::::keypoints:
+- "The easiest way to adjust the size of your saved plots is by adjusting the plot window in RStudio"
+::::
