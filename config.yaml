@@ -64,6 +64,7 @@ episodes:
 - further_mapping.Rmd
 - different_plots.Rmd
 - facets.Rmd
+- scaling-and-coordinates.Rmd
 
 # Information for Learners
 learners:
