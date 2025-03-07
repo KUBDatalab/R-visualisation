@@ -300,6 +300,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="scaling-and-coordinates.html">6. Scaling and coordinates</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -412,7 +424,44 @@ better clarities, something that would have been impossible to see in
 the previous plot.</p>
 <hr>
 <h3 id="facets-figure-3">Figure 3</h3>
-<figure><img src="fig/facets-rendered-facet_grid-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr></section>
+<figure><img src="fig/facets-rendered-facet_grid-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr></section><section id="scaling-and-coordinates"><h2 class="section-heading"><a href="scaling-and-coordinates.html">Scaling and coordinates</a></h2>
+<hr class="half-width">
+<h3 id="scaling-and-coordinates-figure-1">Figure 1</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-coordinate_origo_1-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-2">Figure 2</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-coordinate_origo_2-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-3">Figure 3</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-zooming-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-4">Figure 4</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-cartesian-zoom-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-5">Figure 5</h3>
+<p><img src="fig/scaling-and-coordinates-rendered-zoom_comparison-1.png" style="display: block; margin: auto;" class="figure">
+The trendlines are very different, because the data they are based on,
+is different. Also note that we get one set of warnings about missing
+data. When we zoom using <code>ylim</code> both
+<code>geom_smooth</code>, and <code>geom_point</code> are missing data.
+When we zoom using <code>coord_cartesian</code> they have access to all
+data - but do not plot it.</p>
+<hr>
+<h3 id="scaling-and-coordinates-figure-6">Figure 6</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-flipped-coords-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-7">Figure 7</h3>
+<p><img src="fig/scaling-and-coordinates-rendered-log-transform-y-1.png" style="display: block; margin: auto;" class="figure">
+This plot reveals a gap in the prices. There are no diamonds in this
+dataset with a price between 1454 USD and 1546 USD. The educated guess
+is an error in the original dataset.</p>
+<hr>
+<h3 id="scaling-and-coordinates-figure-8">Figure 8</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-pie_chart-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-9">Figure 9</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-scale_color-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<h3 id="scaling-and-coordinates-figure-10">Figure 10</h3>
+<p><img src="fig/scaling-and-coordinates-rendered-color_brewer-1.png" style="display: block; margin: auto;" class="figure">
+What we did to change the background will be covered in the next
+episode.</p>
+<hr>
+<h3 id="scaling-and-coordinates-figure-11">Figure 11</h3>
+<figure><img src="fig/scaling-and-coordinates-rendered-manual_colors-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr></section>
 </div>
     </main>
 </div>
@@ -425,12 +474,12 @@ the previous plot.</p>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/chrbknudsen/R-visualisation_new/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/kubdatalab/R-visualisation_new/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/chrbknudsen/R-visualisation_new/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/chrbknudsen/R-visualisation_new/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/chrbknudsen/R-visualisation_new/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:kubdatalab@kb.dk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="https://github.com/kubdatalab/R-visualisation_new/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/kubdatalab/R-visualisation_new/" class="external-link">Source</a></p>
+				<p><a href="https://github.com/kubdatalab/R-visualisation_new/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:kubdatalab@kb.dk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
 
@@ -450,15 +499,15 @@ the previous plot.</p>
     {
   "@context": "https://schema.org",
   "@type": "TrainingMaterial",
-  "@id": "https://chrbknudsen.github.io/R-visualisation_new/images.html",
+  "@id": "https://kubdatalab.github.io/R-visualisation_new/images.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, KUB Datalab",
   "name": "All Images",
   "creativeWorkStatus": "active",
-  "url": "https://chrbknudsen.github.io/R-visualisation_new/images.html",
-  "identifier": "https://chrbknudsen.github.io/R-visualisation_new/images.html",
+  "url": "https://kubdatalab.github.io/R-visualisation_new/images.html",
+  "identifier": "https://kubdatalab.github.io/R-visualisation_new/images.html",
   "dateCreated": "2024-07-31",
   "dateModified": "2025-03-07",
   "datePublished": "2025-03-07"
