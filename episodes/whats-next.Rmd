@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What should I do next?
 
-First of all: If you do not have data you want to visualize 
+First of all: If you do not have data you want to visualise 
 already. Find some!
 
 [Kaggle](https://www.kaggle.com/datasets) host competitions 
@@ -56,6 +56,12 @@ challenges you to create a data visualization on a certain topic each day of apr
 we are not going to participate ourselves. But! The collection 
 of visualizations from 2022 is humongous, and a great place
 to find ideas.
+
+Sometimes you have a pretty good idea about what you want to visualise. But 
+you are uncertain about what graphs might be used for that. Or you know 
+what graph you want to make, but can't quite figure out how to write the code.
+[The R Graph Gallery](https://r-graph-gallery.com/) have a wide selection of
+chart types with code!
 
 
 ## Other online courses
