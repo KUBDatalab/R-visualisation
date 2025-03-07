@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What should I do next?
 
-First of all: If you do not have data you want to visualize 
+First of all: If you do not have data you want to visualise 
 already. Find some!
 
 [Kaggle](https://www.kaggle.com/datasets) host competitions 
