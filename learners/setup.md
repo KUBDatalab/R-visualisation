@@ -1,7 +1,3 @@
---
-title: Setup
----
-
 ## Software Setup
 
 ::::::::::::::::::::::::: callout
