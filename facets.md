@@ -39,7 +39,7 @@ Warning: Using shapes for an ordinal variable is not advised
 Warning: The shape palette can deal with a maximum of 6 discrete values because more
 than 6 becomes difficult to discriminate
 ℹ you have requested 8 values. Consider specifying shapes manually if you need
-  that many have them.
+  that many of them.
 ```
 
 ``` warning
