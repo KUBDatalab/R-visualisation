@@ -181,7 +181,7 @@ range from the box.
 
 Boxplots are not necessarily the best option for showing distributions.
 A good alternative could be violinplots. They show a *density plot* - basically 
-a histogram with infinite bins - for each group, blotted symmetrically around an axis:
+a histogram with infinite bins - for each group, plotted symmetrically around an axis:
 
 <img src="fig/different_plots-rendered-violin_plot-1.png" style="display: block; margin: auto;" />
 
