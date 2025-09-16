@@ -355,7 +355,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Further mapping</h1>
-        <p>Last updated on 2025-09-09 |
+        <p>Last updated on 2025-09-16 |
 
         <a href="https://github.com/kubdatalab/R-visualisation_new/edit/main/episodes/further_mapping.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -436,13 +436,21 @@ arguments and <em>color</em> when we refer to the variable
 <code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">diamonds</span>, mapping <span class="op">=</span> <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">carat</span>, y <span class="op">=</span> <span class="va">price</span><span class="op">)</span>, colour <span class="op">=</span> <span class="va">color</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning in fortify(data, ...): Arguments in `...` must be used.
+✖ Problematic argument:
+• colour = color
+ℹ Did you misspell an argument name?</code></pre>
+</div>
 <p><img src="fig/further_mapping-rendered-chunk2-1.png" style="display: block; margin: auto;" class="figure">
 What happened to the colour? The colour argument is outside the aes()
 function. That means that we are not mapping data to the colour!</p>
 <section><h2 class="section-heading" id="what-else-can-we-map-data-to">What else can we map data to?<a class="anchor" aria-label="anchor" href="#what-else-can-we-map-data-to"></a></h2>
 <hr class="half-width"><p>More or less every phenomenon in a scatter plot can have data mapped
 to it, eg. the size of the points:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -473,7 +481,7 @@ aesthetics.</p>
 <hr class="half-width"><p>Rather than mapping values from data to an aesthetic, we can provide
 values directly. One very useful aesthetic to play with, at least when
 we have as many datapoints as we have here, is <code>alpha</code>:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -583,8 +591,8 @@ any links that you are not going to use.
   "url": "https://kubdatalab.github.io/R-visualisation_new/further_mapping.html",
   "identifier": "https://kubdatalab.github.io/R-visualisation_new/further_mapping.html",
   "dateCreated": "2024-07-31",
-  "dateModified": "2025-09-09",
-  "datePublished": "2025-09-09"
+  "dateModified": "2025-09-16",
+  "datePublished": "2025-09-16"
 }
 
   </script><script>
