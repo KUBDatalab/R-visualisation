@@ -66,6 +66,13 @@ ggplot(data = diamonds, mapping = aes(x = carat, y = price), colour = color) +
   geom_point()
 ```
 
+``` warning
+Warning in fortify(data, ...): Arguments in `...` must be used.
+✖ Problematic argument:
+• colour = color
+ℹ Did you misspell an argument name?
+```
+
 <img src="fig/further_mapping-rendered-chunk2-1.png" style="display: block; margin: auto;" />
 What happened to the colour? The colour argument is outside the aes() function.
 That means that we are not mapping data to the colour!

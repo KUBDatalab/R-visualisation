@@ -43,7 +43,7 @@ diamonds %>%
 ```
 
 ``` output
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+`stat_bin()` using `bins = 30`. Pick better value `binwidth`.
 ```
 
 <img src="fig/different_plots-rendered-histogram-1.png" style="display: block; margin: auto;" />

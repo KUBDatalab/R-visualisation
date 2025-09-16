@@ -38,7 +38,9 @@ ggplot(diamonds, aes(carat, price)) +
 More exists:
 
 ``` error
-Error in default | bw: operations are possible only for numeric, logical or complex types
+Error: Can't find method for generic `|(e1, e2)`:
+- e1: <ggplot2::ggplot>
+- e2: <ggplot2::ggplot>
 ```
 
 :::: callout
