@@ -24,7 +24,7 @@ our <a href="https://kubdatalab.github.io/R-intro/" target="_blank">introductory
     - Alternatively run everything on rstudio.cloud
 - Know how to assign values to variables
 - Know what a function is, and how we pass input and parameters to it
-- Be familiar with the %>% operator
+- Be familiar with the |> operator
 - Know the basic verbs from dplyr of the tidyverse:
     - select
     - filter
