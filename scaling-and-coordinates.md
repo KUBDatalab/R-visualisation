@@ -37,7 +37,7 @@ we force it to?
 
 
 ``` r
-diamonds %>% 
+diamonds|>
   ggplot(aes(depth, table)) +
   geom_point()
 ```
@@ -51,7 +51,7 @@ we want:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   xlim(c(0,80)) +
@@ -72,7 +72,7 @@ Let us zoom in on the plot above, and look at tables between
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   ylim(c(50,70))
@@ -96,7 +96,7 @@ using the `coord_cartesian` function:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   coord_cartesian(ylim = c(50,70))
@@ -122,14 +122,14 @@ one where we zoom using `ylim`, and one where we zoom using `coord_cartesian`:
 
 ``` r
 library(patchwork)
-p1 <- diamonds %>% 
+p1 <- diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   ylim(c(50,70)) +
   geom_smooth() +
   ggtitle("Zoom by ylim", subtitle = "Smooth only uses a subset of data")
 
-p2 <- diamonds %>% 
+p2 <- diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   coord_cartesian(ylim = c(50,70)) +
@@ -206,7 +206,7 @@ logarithm, you will need to look into the package `scales`:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   scale_y_log10()
@@ -260,9 +260,9 @@ beginning at 0:
 
 
 ``` r
-diamonds %>% 
-  mutate(color = as.character(color)) %>% 
-  filter(color == "G") %>% 
+diamonds |>
+  mutate(color = as.character(color)) |>
+  filter(color == "G") |>
   ggplot(aes(x = color, fill = cut)) +
   geom_bar(position = "stack") +
   coord_polar("y", start=0) 

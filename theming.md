@@ -61,7 +61,7 @@ way to do that:
 
 
 ``` r
-diamonds %>% 
+diamonds |> 
   ggplot(aes(carat, price)) +
   geom_point() +
   theme_dark() +
@@ -83,7 +83,7 @@ Finally note, that the order is important:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   theme_dark() +
@@ -92,7 +92,7 @@ diamonds %>%
 and 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   theme(axis.text.y = element_text(angle= 45)) +
@@ -110,7 +110,7 @@ colour like this:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   theme(axis.text.y = element_text(angle= 45),

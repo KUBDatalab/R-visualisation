@@ -37,7 +37,7 @@ if we need to manipulate the data before plotting, eg. by filtering it.
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(mapping = aes(carat)) +
   geom_histogram()
 ```
@@ -54,7 +54,7 @@ number of bins, and we should chose a better value ourself.
 
 
 ``` r
-diamonds %>% 
+diamonds |> 
   ggplot(aes(carat)) +
   geom_histogram(bins = 25)
 ```
@@ -86,7 +86,7 @@ provide a count:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(color)) +
   geom_bar()
 ```
@@ -115,8 +115,8 @@ the worst. These types of ordered categorical data are called ordinal data.
 They look like this:
 
 ``` r
-diamonds %>% 
-  select(cut, color, clarity) %>% 
+diamonds |>
+  select(cut, color, clarity) |>
   str()
 ```
 
@@ -134,8 +134,8 @@ controlling the order of the levels of the categorical value we are plotting:
 
 
 ``` r
-diamonds %>% 
-  mutate(color = fct_rev(color)) %>%  
+diamonds |>
+  mutate(color = fct_rev(color)) |>
   ggplot(aes(color)) +
   geom_bar()
 ```
@@ -155,7 +155,7 @@ can make several boxplots in one plot:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(x = carat, y = cut)) +
   geom_boxplot()
 ```
@@ -196,7 +196,7 @@ with carat on the x-axis, and cut on the y-axis.
 
 
 ``` r
-diamonds %>% 
+diamonds |>
 ggplot(aes(carat, y = cut)) +
 geom_violin()
 ```

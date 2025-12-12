@@ -126,7 +126,7 @@ make individual plots for each combination of `clarity` and `color`:
 
 
 ``` r
-diamonds %>% 
+diamonds |>
   ggplot(aes(x = carat, y = price, colour = color)) +
     geom_point() +
     facet_grid(clarity ~ color)
