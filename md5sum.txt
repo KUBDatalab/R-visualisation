@@ -15,6 +15,6 @@
 "episodes/whats-next.Rmd" "07eb6776f94302b2432cc343a5484d66" "site/built/whats-next.md" "2025-12-12"
 "instructors/instructor-notes.md" "5cf113fd22defb29d17b64597f3c9bc0" "site/built/instructor-notes.md" "2025-12-12"
 "learners/reference.md" "527a12e217602daae51c5fd9ef8958df" "site/built/reference.md" "2025-12-12"
-"learners/setup.md" "aa8795c209bf40a10b4b501fbb849acd" "site/built/setup.md" "2025-12-12"
+"learners/setup.md" "04ba55a9ebaebeadfc3629c5f0652e65" "site/built/setup.md" "2025-12-12"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2025-12-12"
 "renv/profiles/lesson-requirements/renv.lock" "ce9b917887e92bed4a701f2980201cd8" "site/built/renv.lock" "2025-12-12"
