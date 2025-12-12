@@ -106,7 +106,7 @@ In this plot we plot price as a function of carate, and
 make individual plots for each combination of `clarity` and `color`:
 
 ```{r facet_grid}
-diamonds %>% 
+diamonds |>
   ggplot(aes(x = carat, y = price, colour = color)) +
     geom_point() +
     facet_grid(clarity ~ color)

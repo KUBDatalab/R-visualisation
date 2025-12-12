@@ -40,7 +40,7 @@ does not necessarily give us a coordinate system that begins at zero. So how do
 we force it to?
 
 ```{r coordinate_origo_1}
-diamonds %>% 
+diamonds|>
   ggplot(aes(depth, table)) +
   geom_point()
 ```
@@ -51,7 +51,7 @@ vector of length 2, indicating the minimum and maximum values
 we want:
 
 ```{r coordinate_origo_2}
-diamonds %>% 
+diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   xlim(c(0,80)) +
@@ -69,7 +69,7 @@ Let us zoom in on the plot above, and look at tables between
 50 and 70, by adjusting the ylim:
 
 ```{r zooming}
-diamonds %>% 
+diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   ylim(c(50,70))
@@ -85,7 +85,7 @@ Zooming in on particular areas of the plot is done better
 using the `coord_cartesian` function:
 
 ```{r cartesian-zoom}
-diamonds %>% 
+diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   coord_cartesian(ylim = c(50,70))
@@ -108,14 +108,14 @@ one where we zoom using `ylim`, and one where we zoom using `coord_cartesian`:
 
 ```{r zoom_comparison}
 library(patchwork)
-p1 <- diamonds %>% 
+p1 <- diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   ylim(c(50,70)) +
   geom_smooth() +
   ggtitle("Zoom by ylim", subtitle = "Smooth only uses a subset of data")
 
-p2 <- diamonds %>% 
+p2 <- diamonds |>
   ggplot(aes(depth, table)) +
   geom_point() +
   coord_cartesian(ylim = c(50,70)) +
@@ -169,7 +169,7 @@ logarithm, you will need to look into the package `scales`:
 
 
 ```{r log-transform-y}
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   scale_y_log10()
@@ -220,9 +220,9 @@ the coordinate system to be polar (the y-axis specifically),
 beginning at 0:
 
 ```{r pie_chart}
-diamonds %>% 
-  mutate(color = as.character(color)) %>% 
-  filter(color == "G") %>% 
+diamonds |>
+  mutate(color = as.character(color)) |>
+  filter(color == "G") |>
   ggplot(aes(x = color, fill = cut)) +
   geom_bar(position = "stack") +
   coord_polar("y", start=0) 
