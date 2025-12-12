@@ -39,7 +39,7 @@ Both methods can be used. However piping the data into `ggplot()` is useful
 if we need to manipulate the data before plotting, eg. by filtering it.
 
 ```{r histogram}
-diamonds %>% 
+diamonds |>
   ggplot(mapping = aes(carat)) +
   geom_histogram()
 ```
@@ -49,7 +49,7 @@ bins by default is set to 30. 30 bins will almost never be the correct
 number of bins, and we should chose a better value ourself.
 
 ```{r adjust_bins}
-diamonds %>% 
+diamonds |> 
   ggplot(aes(carat)) +
   geom_histogram(bins = 25)
 ```
@@ -78,7 +78,7 @@ the number of observations itself - we do not need to
 provide a count:
 
 ```{r bar_charts, eval=T}
-diamonds %>% 
+diamonds |>
   ggplot(aes(color)) +
   geom_bar()
 ```
@@ -104,8 +104,8 @@ the worst. These types of ordered categorical data are called ordinal data.
 
 They look like this:
 ```{r categorical}
-diamonds %>% 
-  select(cut, color, clarity) %>% 
+diamonds |>
+  select(cut, color, clarity) |>
   str()
 ```
 Note that even though the colour "D" is better than "E", the levels 
@@ -115,8 +115,8 @@ All this just to say: We can control the order of columns in the plot, by
 controlling the order of the levels of the categorical value we are plotting:
 
 ```{r categorical_order}
-diamonds %>% 
-  mutate(color = fct_rev(color)) %>%  
+diamonds |>
+  mutate(color = fct_rev(color)) |>
   ggplot(aes(color)) +
   geom_bar()
 ```
@@ -133,7 +133,7 @@ We can make a boxplot of a single variable in the data - or we
 can make several boxplots in one plot:
 
 ```{r boxplots}
-diamonds %>% 
+diamonds |>
   ggplot(aes(x = carat, y = cut)) +
   geom_boxplot()
 ```
@@ -160,7 +160,7 @@ A good alternative could be violinplots. They show a *density plot* - basically
 a histogram with infinite bins - for each group, plotted symmetrically around an axis:
 
 ```{r violin_plot, echo = F}
-diamonds %>% ggplot(aes(carat, y = cut)) +
+diamonds |> ggplot(aes(carat, y = cut)) +
   geom_violin()
 ```
 
@@ -174,7 +174,7 @@ with carat on the x-axis, and cut on the y-axis.
 ## Solution
 
 ```{r solution, eval = FALSE}
-diamonds %>% 
+diamonds |>
 ggplot(aes(carat, y = cut)) +
 geom_violin()
 ```

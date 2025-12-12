@@ -37,8 +37,8 @@ ggplot(diamonds, aes(carat, price)) +
 ```
 More exists:
 ```{r different_themes, echo = F}
-base <- diamonds %>% 
-  sample_frac(0.2) %>% 
+base <- diamonds |>
+  sample_frac(0.2) |> 
   ggplot(aes(carat, price)) +
   geom_point() 
 
@@ -99,7 +99,7 @@ by what we did to the axis, eg: "scale_y_log10"
 way to do that:
 
 ```{r theming}
-diamonds %>% 
+diamonds |> 
   ggplot(aes(carat, price)) +
   geom_point() +
   theme_dark() +
@@ -118,7 +118,7 @@ Finally note, that the order is important:
 
 
 ```{r theme_order_matters_1, eval = F}
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   theme_dark() +
@@ -126,7 +126,7 @@ diamonds %>%
 ```
 and 
 ```{r theme_order_matters_2, eval = F}
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   theme(axis.text.y = element_text(angle= 45)) +
@@ -143,7 +143,7 @@ of the plot we are changing a rectangular object `element_rect`, and can set the
 colour like this: 
 
 ```{r background}
-diamonds %>% 
+diamonds |>
   ggplot(aes(carat, price)) +
   geom_point() +
   theme(axis.text.y = element_text(angle= 45),
