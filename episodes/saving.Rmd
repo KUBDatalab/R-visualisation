@@ -23,8 +23,8 @@ library(tidyverse)
 ## It would be nice to be able to save the plot.
 
 Saving a plot can be done directly from the plot pane in
-RStudio
-![Saving from Rstudio](../fig/08-saving-plot.png)
+Positron
+![Saving from Positron](../fig/08-saving-plot.png)
 
 
 ggplot2 also includes a function for saving the last plot
