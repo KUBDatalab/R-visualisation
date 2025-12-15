@@ -5,11 +5,11 @@ exercises: 5
 ---
 
 :::: questions
-- "What is facetting?"
+- What is facetting?
 ::::
   
 :::: objectives
-- "Learn to use small multiples in your plots"
+- Learn to use small multiples in your plots
 
 ::::
   
@@ -118,6 +118,6 @@ each facet.
 
 
 :::: keypoints
-- "Facetting can make busy plots more understandable"
-- "Grid facetting in two dimensions allows us to plot even more variables"
+- Facetting can make busy plots more understandable
+- Grid facetting in two dimensions allows us to plot even more variables
 ::::

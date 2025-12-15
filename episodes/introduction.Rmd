@@ -4,15 +4,15 @@ teaching: 10
 exercises: 5
 ---
 :::: questions
-  - "Why are we even visualizing?"
-  - "What are the metadata of this dataset?"
+  - Why are we even visualizing?
+  - What are the metadata of this dataset?
 
 ::::
 
 
 :::: objectives
-- "Get to know the importance of visualisations"
-- "Get to know the data we are going to work with"
+- Get to know the importance of visualisations
+- Get to know the data we are going to work with
 
 ::::
 
@@ -100,8 +100,8 @@ not care if it is actually suitable for the diamond data we are working
 with.
 
 :::: keypoints
-  - "This is not an introduction to R"
-  - "Visualisation is a useful way of representing data"
-  - "We are going to study diamonds!"
+  - This is not an introduction to R
+  - Visualisation is a useful way of representing data
+  - We are going to study diamonds!
 
 ::::

@@ -19,10 +19,10 @@ Some, but certainly not all, of the different types of plots are introduced.
 > ## Prerequisites
 >
 > We are going to assume that you have some familiarity with R and
-> RStudio, equivalent to the topics covered in our introductory course,
+> Positron, equivalent to the topics covered in our introductory course,
 > [R for absolute beginners](https://kubdatalab.github.io/beginning-R/).
 > We are going to use the datamanipulation tools from the tidyverse
-> a lot - so please brush up on the pipe %>% if you have forgotten 
+> a lot - so please brush up on the pipe |> if you have forgotten 
 > about it.
 > 
 {: .prereq}

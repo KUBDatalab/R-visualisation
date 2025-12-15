@@ -5,17 +5,17 @@ exercises: 5
 ---
 
 :::: questions
-- "How can we adjust the scales in a plot?"
-- "How can we zoom-in to specific parts of a plot?"
-- "How can we change the colours of the plot?"
-- "How do I make a pie-chart?"
+- How can we adjust the scales in a plot?
+- How can we zoom-in to specific parts of a plot?
+- How can we change the colours of the plot?
+- How do I make a pie-chart?
 ::::
 
 ::::objectives
-- "Learn to zoom by adjusting scales"
-- "Learn how to make log-scale plots"
-- "Learn why you should not make a pie-chart"
-- "Learn how to control the colour-scale"
+- Learn to zoom by adjusting scales
+- Learn how to make log-scale plots
+- Learn why you should not make a pie-chart
+- Learn how to control the colour-scale
 :::: 
 
 
@@ -318,7 +318,7 @@ for colour-pallettes is [Colorbrewer2](https://colorbrewer2.org/).
 
 
 :::: keypoints
-- "Pie charts are a bad idea!"
-- "Zooming might exclude data if done wrong"
-- "Play around to find the colours you like"
+- Pie charts are a bad idea!
+- Zooming might exclude data if done wrong
+- Play around to find the colours you like
 ::::
