@@ -5,13 +5,13 @@ exercises: 5
 ---
 
 :::: questions
-- "Can we show data using something other than position?"
-- "What is correct, colour or color?"
-- "How do I find out what a `geom_` can do?"
+- Can we show data using something other than position?
+- What is correct, colour or color?
+- How do I find out what a `geom_` can do?
 ::::
 
 :::: objectives
-- "Learn to plot more than just positions"
+- Learn to plot more than just positions
 
 ::::
 
@@ -164,6 +164,6 @@ ourself, these are available directly in ggplot. They are numbered, because it i
 
 
 :::: keypoints
-- "Data can be plottet as something other than position"
-- "Types of plots are determined by `geom_`functions"
+- Data can be plottet as something other than position
+- Types of plots are determined by `geom_`functions
 ::::

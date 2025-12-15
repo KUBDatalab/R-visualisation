@@ -5,11 +5,11 @@ exercises: 0
 ---
 
 ::::questions
-- "How can I save the plots?"
+- How can I save the plots?
 ::::
 
 ::::objectives
-- "Learn how to save your plots in different formats"
+- Learn how to save your plots in different formats
 ::::
 
 
@@ -70,5 +70,5 @@ We would like to recommend the "svg" format. That format is a "vector-based" for
 that you can scale to any size you want.
 
 ::::keypoints:
-- "The easiest way to adjust the size of your saved plots is by adjusting the plot window in RStudio"
+- The easiest way to adjust the size of your saved plots is by adjusting the plot window in RStudio
 ::::

@@ -5,12 +5,12 @@ exercises: 5
 ---
 
 ::::questions
-- "What is the next step in learning to plot?"
+- What is the next step in learning to plot?
 ::::
 
 ::::objectives
-- "Provide tips on where to locate data for plotting"
-- "Provide tips for finding inspiration for plotting"
+- Provide tips on where to locate data for plotting
+- Provide tips for finding inspiration for plotting
 ::::
 
 
@@ -75,5 +75,5 @@ ggplot2 is build for extensions. And there are many.
 
 
 ::::keypoints
-- "ggplot2 is extensible - a LOT of extensions are available"
+- ggplot2 is extensible - a LOT of extensions are available
 ::::

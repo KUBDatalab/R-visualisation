@@ -6,13 +6,13 @@ exercises: 5
 
 
 :::: questions
-- "How do we build a plot with ggplot2?"
+- How do we build a plot with ggplot2?
 
 ::::
 
 :::: objectives
-- "Get to understand the layers in ggplot2"
-- "Make our first plot"
+- Get to understand the layers in ggplot2
+- Make our first plot
 
 ::::
 
