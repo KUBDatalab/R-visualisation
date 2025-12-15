@@ -5,14 +5,14 @@ exercises: 5
 ---
 
 :::: questions
-- "How can I make the plot look good?"
-- "How do I get rid of that grey background?"
-- "How do I get rid of the gridlines?"
+- How can I make the plot look good?
+- How do I get rid of that grey background?
+- How do I get rid of the gridlines?
 ::::
 
 ::::objectives
-- "Learn to use different themes"
-- "Learn to adjust the appearance of specific parts of the plot"
+- Learn to use different themes
+- Learn to adjust the appearance of specific parts of the plot
 ::::
 
 
@@ -154,5 +154,5 @@ background of the entire plot, rather than the background of the actual
 area on which we are plotting.
 
 ::::keypoints
-- "EVERYTHING in the plot can be customized"
+- EVERYTHING in the plot can be customized
 ::::

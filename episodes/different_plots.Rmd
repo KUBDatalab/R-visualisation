@@ -202,7 +202,7 @@ advanced functionality around plots. Two of the more interesting extensions are:
 `gganimate` makes it easyish to make animated plots using ggplot2
 
 :::: keypoints
-- "Categorical data, aka factors can control the order of data in plots"
-- "ggplot makes it easy to make many different types of plots"
-- "ggplot have many useful extensions"
+- Categorical data, aka factors can control the order of data in plots<
+- ggplot makes it easy to make many different types of plots
+- ggplot have many useful extensions
 ::::
