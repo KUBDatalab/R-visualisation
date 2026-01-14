@@ -20,6 +20,7 @@ exercises: 5
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(patchwork)
 ```
 
 ### The THEME_FUNCTIONs

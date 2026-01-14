@@ -38,7 +38,7 @@ list of build-in geoms in ggplot2:
 ```{r liste-over-geomer, echo = F, warning=F, message=F}
 library(ggplot2)
 library(dplyr)
-lsf.str("package:ggplot2") |> grep("^geom_", ., value = TRUE)
+lsf.str("package:ggplot2") |> grep("^geom_", x = _, value = TRUE)
 
 ```
 ggplot2 is also build as an extensible package, making 
