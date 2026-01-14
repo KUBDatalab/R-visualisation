@@ -398,15 +398,8 @@ family of <code>theme</code> functions:</p>
 <span>  <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <p><img src="fig/theming-rendered-theme_bw-1.png" alt="" style="display: block; margin: auto;" class="figure">
-More exists:</p>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error:
-! Can't find method for generic `|(e1, e2)`:
-- e1: &lt;ggplot2::ggplot&gt;
-- e2: &lt;ggplot2::ggplot&gt;</code></pre>
-</div>
+More exists:
+<img src="fig/theming-rendered-different_themes-1.png" alt="" style="display: block; margin: auto;" class="figure"></p>
 <div id="notice-the-pattern" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -427,7 +420,7 @@ followed by what we did to the axis, eg: “scale_y_log10”</p>
 <h3 id="even-more-theming">Even more theming<a class="anchor" aria-label="anchor" href="#even-more-theming"></a></h3>
 <p><em>Every</em> element in the plot can be controlled. The
 <code>theme()</code> function is the way to do that:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -445,7 +438,7 @@ changed. There are 97 things in total.</p>
 we begin with a built-in theme that we like, and change the parts we
 want to change.</p>
 <p>Finally note, that the order is important:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -456,7 +449,7 @@ want to change.</p>
 <span>  <span class="fu">theme</span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>angle<span class="op">=</span> <span class="fl">45</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <p>and</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -476,7 +469,7 @@ with specific arguments to specify <em>what</em> we want to do. For the
 background of the plot we are changing a rectangular object
 <code>element_rect</code>, and can set the background colour like
 this:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
