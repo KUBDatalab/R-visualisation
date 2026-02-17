@@ -508,50 +508,50 @@ other attributes of 53940 diamonds. The dataset is included in the
 <col width="43%">
 <col width="56%">
 </colgroup>
-<thead><tr>
+<thead><tr class="header">
 <th>Variable</th>
 <th>What is it?</th>
 </tr></thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>carat</td>
 <td>Weight of the diamond in carat (0.200 gram)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>cut</td>
 <td>Quality of the cut of the diamond (Fair, Good, Very Good, Premium,
 Ideal)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>color</td>
 <td>Colour of the diamond from D (best), to J (worst)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>clarity</td>
 <td>How clear is the diamond. I1 (worst), SI2, SI1, VS2, VS1, VVS2,
 VVS1, IF (best)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>depth</td>
 <td>Total depth percentage = z / mean(x, y)</td>
 </tr>
-<tr>
+<tr class="even">
 <td>table</td>
 <td>Width of the top of the diamond relative to its widest point</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>price</td>
 <td>Price in US dollars</td>
 </tr>
-<tr>
+<tr class="even">
 <td>x</td>
 <td>Length in mm</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>y</td>
 <td>Width in mm</td>
 </tr>
-<tr>
+<tr class="even">
 <td>z</td>
 <td>depth in mm</td>
 </tr>
@@ -810,7 +810,7 @@ the diamond). Make it a scatterplot</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1248,7 +1248,7 @@ on the x-axis, and cut on the y-axis.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1406,7 +1406,7 @@ clarity”</p>
 multiples”, popularised by Edward Tufte. He describes it as (resembling)
 “the frames of a movie: a series of graphics, showing the same
 combination of variables, indexed by changes in another variable.” The
-method is also known as”trellis”, “lattice”, “grid” or “panel” charts.
+method is also known as “trellis”, “lattice”, “grid” or “panel” charts.
 They allows us to break down a very “busy” chart, containing too much
 information, making it possible for the reader of the charts to walk
 through them one category at a time, and make comparisons.</p>
@@ -1429,7 +1429,7 @@ points by <code>color</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1724,7 +1724,7 @@ y-axis) with both axes log transformed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1769,7 +1769,7 @@ coordinate system to be polar (the y-axis specifically), beginning at
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are polar coordinates? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Our ordinary coordinate system is a cartesian coordinate system. Each
 point in the system are defined by two values, X and Y, representing the
@@ -2287,7 +2287,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC BY-NC-SA 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.18.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.18.5" class="external-link">sandpaper (0.18.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
