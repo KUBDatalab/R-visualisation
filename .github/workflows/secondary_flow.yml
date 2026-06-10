@@ -45,10 +45,23 @@ jobs:
           # Kopiér alt indhold; overskriver filer med samme navn i mål
           cp -a "$SRC_DIR/." favicons/lc/
 
+      - name: Erstat Carpentries-link i alle HTML-filer
+        run: |
+          COUNT=$(grep -rl "https://carpentries.org/about/" . --include="*.html" | wc -l)
+          echo "Ændrer $COUNT HTML-filer"
+
+          grep -rl "https://carpentries.org/about/" . --include="*.html" | while read file
+          do
+            sed -i 's|https://carpentries.org/about/|https://kub.kb.dk/datalab|g' "$file"
+          done
+
       - name: Commit og push ændringer
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Opdateret fil på gh-pages"
+          git diff --cached --quiet && echo "Ingen ændringer" && exit 0
+
+          git commit -m "Opdateret filer på gh-pages"
           git push
+  
