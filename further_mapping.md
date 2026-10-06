@@ -75,7 +75,7 @@ Warning in fortify(data, ...): Arguments in `...` must be used.
 
 <img src="fig/further_mapping-rendered-chunk2-1.png" alt="" style="display: block; margin: auto;" />
 What happened to the colour? The colour argument is outside the aes() function.
-That means that we are not mapping data to the colour!
+That means that we are not mapping data to the colour! We do get a warning indicating the problem. A lot of warnings can be safely ignored, but we should always take a look at them before ignoring them!
 
 
 
