@@ -75,7 +75,7 @@ Warning in fortify(data, ...): Arguments in `...` must be used.
 
 <img src="fig/further_mapping-rendered-chunk2-1.png" alt="" style="display: block; margin: auto;" />
 What happened to the colour? The colour argument is outside the aes() function.
-That means that we are not mapping data to the colour!
+That means that we are not mapping data to the colour! We do get a warning indicating the problem. A lot of warnings can be safely ignored, but we should always take a look at them before ignoring them!
 
 
 
@@ -157,7 +157,16 @@ colour vision.
 In principle we can plot any kind of shape. But without having to program them
 ourself, these are available directly in ggplot. They are numbered, because it is easier to write "14" than "square box with upwardspointing triangle inside".
 
-<img src="fig/further_mapping-rendered-point_shapes-1.png" alt="" style="display: block; margin: auto;" />
+
+``` error
+Error in `library()`:
+! there is no package called 'ggpubr'
+```
+
+``` error
+Error in `loadNamespace()`:
+! there is no package called 'ggpubr'
+```
 
 
 
