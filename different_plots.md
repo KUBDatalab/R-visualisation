@@ -168,12 +168,13 @@ and splitting them up in one plot per cut, on the y-axis.
 :::: callout
 ## What is a boxplot?
 
-Boxplots are useful for showing different distributions. The fat line in
-the middle of the box is the median, the two ends of the box is first and 
-third quartile, and the two whiskers (or lines) on both sides of the 
-box shows the minimum and maximum values - excluding outliers, defined for
-this purpose as values that lies more that 1.5 times the interquartile 
-range from the box.
+Boxplots are useful for showing different distributions. 
+
+* The fat line in the middle of the box is the median, 
+* The two ends of the box is the first and third quartiler
+* The two whiskers (or lines) on both sides of the box shows the minimum and maximum values - excluding outliers, defined for
+this purpose as values that lies more that 1.5 times the interquartile range from the box.
+* The points at both ends shows outliers defined as above
 
 ::::
 
