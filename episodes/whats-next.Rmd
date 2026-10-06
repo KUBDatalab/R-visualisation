@@ -51,6 +51,8 @@ that ggplot2 is not able to on its own. [This page](https://exts.ggplot2.tidyver
 The website/book [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) is a great resource for tips, tricks and thinking about visualizations, 
 especially the [directory of visualizations](https://clauswilke.com/dataviz/directory-of-visualizations.html). Note, however, that the author does not provide examples of the code you need to write to make the plots.
 
+Another great book/website [The Art of Data Visualization with ggplot2](https://nrennie.rbind.io/art-of-viz/) collects the recipes used by Nicola Rennie when she does her awesome visualisations of the weekly [TidyTuesday challenges](https://github.com/rfordatascience/tidytuesday/blob/main/README.md), which we also recommend you play around with.
+
 There exist an online challenge, [#30DayChartChallenge](https://30daychartchallenge.org/), that 
 challenges you to create a data visualization on a certain topic each day of april. That can be a bit of a mouthful and 
 we are not going to participate ourselves. But! The collection 
@@ -62,6 +64,8 @@ you are uncertain about what graphs might be used for that. Or you know
 what graph you want to make, but can't quite figure out how to write the code.
 [The R Graph Gallery](https://r-graph-gallery.com/) have a wide selection of
 chart types with code!
+
+An offspring of that site is the [Dataviz Inspiration](https://www.dataviz-inspiration.com/) site which provides examples of chart examples.
 
 
 ## Other online courses
