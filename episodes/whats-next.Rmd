@@ -65,6 +65,8 @@ what graph you want to make, but can't quite figure out how to write the code.
 [The R Graph Gallery](https://r-graph-gallery.com/) have a wide selection of
 chart types with code!
 
+An offspring of that site is the [Dataviz Inspiration](https://www.dataviz-inspiration.com/) site which provides examples of chart examples.
+
 
 ## Other online courses
 
