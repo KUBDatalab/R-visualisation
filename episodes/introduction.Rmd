@@ -81,10 +81,7 @@ There are 10 variables in the dataset:
 | y        | Width in mm |
 | z        | depth in mm |
 
-Slightly more detailed information can be found in the help for the dataset:
-```{r help_diamonds, eval =F}
-?diamonds
-```
+Slightly more detailed information can be found in the help for the dataset which can be access running `?diamonds`.
 
 ## What are we not going to spend time on?
 
