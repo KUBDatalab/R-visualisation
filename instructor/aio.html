@@ -456,7 +456,7 @@
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>We have a slight problem with the column <code>color</code> in the
 dataset, which can be confusing when we also have a <code>colour</code>
@@ -568,13 +568,7 @@ VVS1, IF (best)</td>
 </tbody>
 </table>
 <p>Slightly more detailed information can be found in the help for the
-dataset:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">?</span><span class="va">diamonds</span></span></code></pre>
-</div>
+dataset which can be access running <code>?diamonds</code>.</p>
 </section><section><h2 class="section-heading" id="what-are-we-not-going-to-spend-time-on">What are we not going to spend time on?<a class="anchor" aria-label="anchor" href="#what-are-we-not-going-to-spend-time-on"></a>
 </h2>
 <hr class="half-width">
@@ -820,7 +814,7 @@ the diamond). Make it a scatterplot</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1226,12 +1220,16 @@ and splitting them up in one plot per cut, on the y-axis.</p>
 <div id="what-is-a-boxplot" class="callout-inner">
 <h3 class="callout-title">What is a boxplot?</h3>
 <div class="callout-content">
-<p>Boxplots are useful for showing different distributions. The fat line
-in the middle of the box is the median, the two ends of the box is first
-and third quartile, and the two whiskers (or lines) on both sides of the
-box shows the minimum and maximum values - excluding outliers, defined
-for this purpose as values that lies more that 1.5 times the
-interquartile range from the box.</p>
+<p>Boxplots are useful for showing different distributions.</p>
+<ul>
+<li>The fat line in the middle of the box is the median,</li>
+<li>The two ends of the box is the first and third quartiler</li>
+<li>The two whiskers (or lines) on both sides of the box shows the
+minimum and maximum values - excluding outliers, defined for this
+purpose as values that lies more that 1.5 times the interquartile range
+from the box.</li>
+<li>The points at both ends shows outliers defined as above</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1737,7 +1735,7 @@ y-axis) with both axes log transformed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1782,7 +1780,7 @@ coordinate system to be polar (the y-axis specifically), beginning at
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are polar coordinates? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Our ordinary coordinate system is a cartesian coordinate system. Each
 point in the system are defined by two values, X and Y, representing the
@@ -2299,7 +2297,7 @@ any links that you are not going to use.
         | <a href="https://github.com/kubdatalab/R-visualisation_new/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:kubdatalab@kb.dk">Contact</a> | <a href="https://kub.kb.dk/datalab" class="external-link">About</a></p>
+        | <a href="mailto:kubdatalab@kb.dk">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
